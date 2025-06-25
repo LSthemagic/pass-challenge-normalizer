@@ -2,7 +2,7 @@
   "name": "teste-pass",
   "version": "1.0.0",
   "description": "Serviço genérico para normalizar JSON de diferentes APIs de hotel.",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
