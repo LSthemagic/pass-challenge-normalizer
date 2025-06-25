@@ -1,0 +1,50 @@
+# Arquivo gerado para o projeto de normalização de JSON
+
+# --- Dependências ---
+# A pasta node_modules é gerada pelo `npm install` e não deve ser versionada.
+# É pesada e pode ser recriada a qualquer momento.
+/node_modules
+
+# --- Arquivos de Ambiente e Segredos ---
+# Contém chaves de API, senhas e outras informações sensíveis.
+# NUNCA adicione este arquivo ao Git.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Logs ---
+# Ignora arquivos de log gerados pela aplicação ou pelo npm.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# --- Arquivos de IDEs e Editores ---
+# Ignora configurações locais do Visual Studio Code.
+.vscode/
+
+# --- Arquivos do Sistema Operacional ---
+# Ignora arquivos gerados automaticamente pelo macOS, Windows e Linux.
+.DS_Store
+Thumbs.db
+
+# --- Arquivos Temporários e de Referência ---
+# Ignora arquivos de backup e outros arquivos que não fazem parte do código-fonte.
+*.tmp
+*.bak
+*.swp
+
+# Arquivos específicos do seu projeto que parecem ser de referência ou backup.
+# Você pode remover estas linhas se quiser versioná-los.
+backup.txt
+nossa_resposta_atual.txt
+response omnibees.json
+
+# --- Saída de Build ---
+# Ignora pastas de compilação/transpilação que podem ser geradas no futuro.
+/dist
+/build
+/coverage
