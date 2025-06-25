@@ -1,0 +1,25 @@
+{
+  "name": "teste-pass",
+  "version": "1.0.0",
+  "description": "Serviço genérico para normalizar JSON de diferentes APIs de hotel.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonstream": "^1.0.3",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
