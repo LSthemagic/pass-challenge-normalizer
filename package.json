@@ -17,7 +17,9 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonstream": "^1.0.3",
-    "lodash.get": "^4.4.2"
+    "lodash.get": "^4.4.2",
+    "openai": "^5.7.0",
+    "openapi": "^1.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
