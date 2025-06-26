@@ -1,159 +1,99 @@
+// utils/ajv-validator.js
 import Ajv from "ajv";
-import addFormats from "ajv-formats";
 
 export const OUTPUT_SCHEMA = {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Schema de Saída Agrupado por Hotel com Ofertas",
-  "description": "Define a estrutura onde cada hotel é um objeto único contendo um array de suas diferentes ofertas (quartos, preços, políticas).",
   "type": "object",
   "properties": {
     "hotel": {
-      "description": "Uma lista de hotéis, cada um com suas ofertas agrupadas.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": [
-          "id",
-          "title",
-          "address",
-          "coordinates",
-          "offers"
-        ],
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "ID único do hotel."
-          },
-          "title": {
-            "type": "string",
-            "description": "Nome do hotel."
-          },
-          "address": {
-            "type": "string",
-            "description": "Endereço do hotel."
-          },
-          "coordinates": {
-            "type": "string",
-            "description": "Coordenadas no formato 'latitude,longitude'."
-          },
-          "star": {
-            "type": ["number", "null"],
-            "description": "Classificação por estrelas do hotel."
-          },
-          "image": {
-            "type": ["string", "null"],
-            "description": "URL da imagem principal."
-          },
+          "id": { "type": "string" },
+          "name": { "type": "string" },
           "chain": {
-            "type": ["string", "null"],
-            "description": "Nome da rede de hotéis."
-          },
-          "zone": {
-            "type": ["integer", "null"],
-            "description": "ID da zona geográfica."
-          },
-          "connector": {
-            "type": "string",
-            "description": "Identificador do provedor de origem (ex: 'Omnibees')."
-          },
-          "amenities": {
-            "type": "array",
-            "description": "Lista consolidada de todas as comodidades disponíveis para este hotel.",
-            "items": {
-              "type": "integer"
+            "type": "object",
+            "properties": {
+              "id": { "type": ["string", "null"] },
+              "name": { "type": ["string", "null"] }
             }
           },
-          "offers": {
+          "stars": { "type": "number" },
+          "address": {
+            "type": "object",
+            "properties": {
+              "street": { "type": ["string", "null"] },
+              "neighborhood": { "type": ["string", "null"] },
+              "city": { "type": ["string", "null"] },
+              "state": { "type": ["string", "null"] },
+              "country": { "type": ["string", "null"] },
+              "zipcode": { "type": ["string", "null"] },
+              "coordinates": {
+                "type": "object",
+                "properties": {
+                  "lat": { "type": "number" },
+                  "lng": { "type": "number" }
+                }
+              }
+            }
+          },
+          "connector": { "type": "string" },
+          "images": { "type": "array", "items": { "type": "string" } },
+          "facilities": { "type": "array", "items": { "type": "string" } },
+          "rooms": {
             "type": "array",
-            "description": "Lista de todas as ofertas de quartos/tarifas disponíveis para este hotel.",
-            "minItems": 1,
             "items": {
               "type": "object",
-              "required": [
-                "price",
-                "currency",
-                "total",
-                "room",
-                "cancellation"
-              ],
               "properties": {
-                "price": {
-                  "type": ["number", "string"],
-                  "description": "Preço base da oferta."
-                },
-                "currency": {
-                  "type": ["string", "null"],
-                  "description": "Código da moeda (ex: BRL, EUR)."
-                },
-                "total": {
-                  "type": ["number", "string"],
-                  "description": "Preço final total da oferta."
-                },
-                "taxes": {
-                  "type": ["array", "null"],
+                "type": { "type": ["string", "null"] },
+                "occupancy": { "type": ["string", "null"] },
+                "name": { "type": "string" },
+                "amenities": { "type": "array", "items": { "type": "string" } },
+                "rates": {
+                  "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name": { "type": "string" },
-                      "description": { "type": "string" },
-                      "amount": { "type": "number" },
-                      "currency": { "type": "string" }
-                    },
-                    "required": ["name", "amount", "currency"]
+                      "rate_id": { "type": "string" },
+                      "board": { "type": ["string", "null"] },
+                      "price": {
+                        "type": "object",
+                        "properties": {
+                          "net": { "type": "number" },
+                          "total": { "type": "number" },
+                          "markup": { "type": ["number", "null"] },
+                          "commission": { "type": ["number", "null"] },
+                          "currency": { "type": ["string", "null"] }
+                        }
+                      },
+                      "payment": { "type": ["string", "null"] },
+                      "cancellation": {
+                        "type": "object",
+                        "properties": {
+                          "amount": { "type": ["number", "null"] },
+                          "from": { "type": ["string", "null"], "format": "date-time" },
+                          "deadline": { "type": ["string", "null"], "format": "date-time" }
+                        }
+                      },
+                      "allotment": { "type": ["integer", "null"] }
+                    }
                   }
-                },
-                "payment": {
-                  "type": ["string", "integer", "null"],
-                  "description": "Informações sobre formas de pagamento."
-                },
-                "cancellation": {
-                  "type": "object",
-                  "properties": {
-                    "deadline": { "type": ["integer", "null"] },
-                    "amount": { "type": ["number", "string", "null"] },
-                    "percent": { "type": ["number", "null"] },
-                    "currency": { "type": ["string", "null"] },
-                    "name": { "type": ["string", "null"] },
-                    "from": { "type": "string" },
-                    "description": { "type": ["string", "null"] }
-                  }
-                },
-                "board": {
-                  "type": ["integer", "null"],
-                  "description": "Código do tipo de pensão."
-                },
-                "room": {
-                  "type": "string",
-                  "description": "Nome/descrição do quarto da oferta."
-                },
-                "allotment": {
-                  "type": ["integer", "null"],
-                  "description": "Número de quartos disponíveis para esta oferta."
-                },
-                "markup": {
-                  "type": "boolean"
-                },
-                "package": {
-                  "type": "boolean"
                 }
               }
             }
           }
-        }
+        },
+        "required": ["id", "name", "rooms"]
       }
-    },
+    }
   },
-  "required": [
-    "hotel"
-  ]
+  "required": ["hotel"]
 };
 
-// Inicializa o AJV com as configurações necessárias
-const ajv = new Ajv({ allowUnionTypes: true }); 
-addFormats(ajv); 
-
-/**
- * Uma função compilada para validar o objeto de resposta final.
- * Útil para garantir que seus mapeadores estão corretos.
- */
+const ajv = new Ajv({ useDefaults: true });
 export const validateFinalOutput = ajv.compile(OUTPUT_SCHEMA);
+
+// const ajv = new Ajv({ allowUnionTypes: true }); 
+// addFormats(ajv); 
+// export const validateFinalOutput = ajv.compile(OUTPUT_SCHEMA);
