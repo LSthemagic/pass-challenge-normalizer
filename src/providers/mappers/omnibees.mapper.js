@@ -1,21 +1,13 @@
 import get from "lodash.get";
 
+// versao atualizada do mapCurrencyCode p ficar dinamica
 function mapCurrencyCode(code) {
-  if (code === 9) return 'BRL';
-  if (code === 16) return 'USD';
-  if (code === 978) return 'EUR';
-  return null;
-}
-
-function mapExtras(serviceData) {
-  return {
-    servicePricingType: get(serviceData, 'ServicePricingType', null),
-    serviceRPH: get(serviceData, 'ServiceRPH', null),
-    id: get(serviceData, 'ID', null),
-    name: get(serviceData, 'ServiceDescription.Name', ''),
-    description: get(serviceData, 'ServiceDescription.Description', ''),
-    priceAfterTax: get(serviceData, 'Price[0].AmountAfterTax', null),
+  const currencyMap = {
+    9: 'BRL',
+    16: 'USD',
+    978: 'EUR',
   };
+  return currencyMap[code] || null;
 }
 
 
@@ -111,6 +103,5 @@ function mapAndGroupOmnibees(hotelsRawData) {
 }
 
 export const omnibeesMapper = {
-    hotel: mapAndGroupOmnibees,
-    extras: (services) => services.map(mapExtras),
+    hotel: mapAndGroupOmnibees
 };

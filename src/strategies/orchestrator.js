@@ -17,18 +17,16 @@ export function runNormalizationPipeline(rawData, providerName) {
 
 
   const { config, mapper } = adapter;
-  const { hotelArrayPath, extrasArrayPath } = config;
+  const { hotelArrayPath } = config;
 
   const hotelItems = get(rawData, hotelArrayPath, []);
-  const extrasItems = extrasArrayPath ? get(rawData, extrasArrayPath, []) : [];
 
-  console.log(`[Orquestrador] Mapeando ${hotelItems.length} hotéis e ${extrasItems.length} extras.`);
+  console.log(`[Orquestrador] Mapeando ${hotelItems.length} hotéis.`);
   
   // Executa as funções de mapeamento manual
   const finalHotels = mapper.hotel(hotelItems);
-  const finalExtras = mapper.extras(extrasItems);
 
   console.log(`[Orquestrador] Mapeamento manual concluído.`);
   
-  return { hotel: finalHotels, extras: finalExtras };
+  return { hotel: finalHotels};
 }

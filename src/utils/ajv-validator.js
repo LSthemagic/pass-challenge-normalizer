@@ -142,22 +142,6 @@ export const OUTPUT_SCHEMA = {
         }
       }
     },
-    "extras": {
-      "description": "Lista de serviços/extras disponíveis.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["id", "name"],
-        "properties": {
-          "servicePricingType": { "type": ["integer", "null"] },
-          "serviceRPH": { "type": ["integer", "null"] },
-          "id": { "type": ["integer", "null"] },
-          "name": { "type": "string" },
-          "description": { "type": "string" },
-          "priceAfterTax": { "type": ["number", "null"] }
-        }
-      }
-    }
   },
   "required": [
     "hotel"
