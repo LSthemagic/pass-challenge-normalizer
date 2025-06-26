@@ -1,0 +1,39 @@
+{
+    "payment": {
+        "credit-card": "Cartão de Crédito",
+        "debit-card": "Cartão de Débito",
+        "pix": "PIX",
+        "bank-slip": "Boleto Bancário",
+        "cash": "Dinheiro",
+        "bank-transfer": "Transferência Bancária",
+        "paypal": "PayPal",
+        "apple-pay": "Apple Pay",
+        "google-pay": "Google Pay",
+        "voucher": "Voucher",
+        "crypto": "Criptomoeda",
+        "installments": "Pagamento Parcelado",
+        "loyalty-points": "Pontos de Fidelidade",
+        "wallet": "Carteira Digital",
+        "direct-debit": "Débito em Conta",
+        "pay-later": "Pagar Depois"
+    },
+    "flag": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "elo": "Elo",
+        "hipercard": "Hipercard",
+        "diners": "Diners Club",
+        "discover": "Discover",
+        "aura": "Aura",
+        "jcb": "JCB",
+        "cabal": "Cabal",
+        "banescard": "Banescard",
+        "sorocred": "Sorocred",
+        "credz": "Credz",
+        "maestro": "Maestro (débito)",
+        "visa-electron": "Visa Electron (débito)",
+        "intercard": "Intercard",
+        "unionpay": "UnionPay"
+    }
+}

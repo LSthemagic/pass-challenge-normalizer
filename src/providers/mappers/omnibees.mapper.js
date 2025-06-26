@@ -5,7 +5,7 @@ import { extractFacilities } from "../../strategies/facility-extractor.agent.js"
 import { extractOccupancyCode } from "../../strategies/occupancy-extractor.agent.js";
 import { omnibeesBoardDictionary } from "../omnibees/dictionaries/board.dictionary.js";
 import { omnibeesCurrencyDictionary } from "../omnibees/dictionaries/currency.dictionary.js";
-import { omnibeesPaymentTypeDictionary } from "../omnibees/dictionaries/payment-types.dictionary.js";
+import { omnibeesPaymentMethodDictionary } from "../omnibees/dictionaries/payment-methods.dictionary.js";
 
 function getHotelTextForAnalysis(hotelData) {
     const uniqueTexts = new Set();
@@ -62,9 +62,15 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                         const cancellationPolicy = get(ratePlan, 'CancelPenalties[0]', {});
                         const providerBoardCode = get(ratePlan, 'MealsIncluded.MealPlanCode', null);
                         const acceptedPaymentsRaw = get(ratePlan, 'PaymentPolicies.AcceptedPayments', []);
-                        const paymentMethods = acceptedPaymentsRaw
-                            .map(payment => omnibeesPaymentTypeDictionary.get(payment.GuaranteeTypeCode))
-                            .filter(Boolean);
+                        
+                        const paymentMethods = new Set();
+
+                        for (const payment of acceptedPaymentsRaw) {
+                            const standardCode = omnibeesPaymentMethodDictionary.get(payment.GuaranteeTypeCode);
+                            if (standardCode) {
+                                paymentMethods.add(standardCode);
+                            }
+                        }
                         
                         roomsMap.get(roomCode).rates.push({
                             rate_id: `R${roomRate.RoomID}-P${roomRate.RatePlanID}`,
@@ -76,7 +82,7 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                                 commission: get(ratePlan, 'Commission.Percent', null),
                                 currency: omnibeesCurrencyDictionary.get(get(ratePlan, 'CurrencyCode', null)),
                             },
-                            payment: paymentMethods,
+                            payment: Array.from(paymentMethods),
                             cancellation: {
                                 amount: get(cancellationPolicy, 'AmountPercent.Amount', null),
                                 from: get(cancellationPolicy, 'Start', null),
