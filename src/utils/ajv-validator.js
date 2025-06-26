@@ -67,7 +67,10 @@ export const OUTPUT_SCHEMA = {
                           "currency": { "type": ["string", "null"] }
                         }
                       },
-                      "payment": { "type": ["string", "null"] },
+                      "payment": {
+                        "type": ["array", "null"],
+                        "items": { "type": "string" }
+                      },
                       "cancellation": {
                         "type": "object",
                         "properties": {
