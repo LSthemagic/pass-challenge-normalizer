@@ -1,9 +1,31 @@
 // strategies/facility-extractor.agent.js
 import { openai } from "../utils/openai-client.js";
 import { MASTER_FACILITIES_LIST_FOR_AI } from '../providers/master-data/facilities.data.js';
+import { facilitiesMap } from '../providers/master-data/facilities.data.js';
 
 export async function extractFacilities(hotelText) {
     if (!hotelText) return [];
+
+    const foundCodes = new Set();
+    for (const [code, name] of facilitiesMap.entries()) {
+        // Cria uma busca simples e um pouco mais flexível para cada amenidade
+        const keywords = name.toLowerCase().split(' ');
+        if (keywords.some(keyword => hotelText.includes(keyword))){
+            foundCodes.add(code);
+        }
+    }
+
+    // Se o parser local já encontrou resultados, podemos retorná-los
+    // e economizar uma chamada de IA.
+    if (foundCodes.size > 0) {
+        console.log(`[facilities Extractor] Modo Rápido encontrou: [${Array.from(foundCodes).join(', ')}]`);
+        return Array.from(foundCodes);
+    }
+
+    // --- 2. TENTATIVA INTELIGENTE (FALLBACK PARA IA) ---
+    // Só chegamos aqui se o parser rápido não encontrou nada.
+    console.log(`[Amenity Extractor] Modo Rápido não encontrou nada. Usando IA como fallback...`);
+
     
     try {
         const completion = await openai.chat.completions.create({
