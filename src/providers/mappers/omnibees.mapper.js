@@ -108,7 +108,8 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                     street: get(basicInfo, 'Address.AddressLine'),
                     neighborhood: null, city: get(basicInfo, 'Address.CityName'),
                     state: get(basicInfo, 'Address.StateProv'), country: get(basicInfo, 'Address.CountryName'),
-                    country: mappingService.getCountryName(standardCountryCode),
+                    // country: mappingService.getCountryName(standardCountryCode),
+                    country: standardCountryCode,
                     zipcode: get(basicInfo, 'Address.PostalCode'),
                     coordinates: { lat: parseFloat(get(basicInfo, 'Position.Latitude', 0)), lng: parseFloat(get(basicInfo, 'Position.Longitude', 0)) }
                 },

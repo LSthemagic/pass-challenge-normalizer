@@ -7,7 +7,7 @@ export async function extractFacilities(hotelText) {
     
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-4o",
+            model: "gpt-3.5-turbo",
             messages: [
                 { role: "system", content: "Você analisa descrições de hotéis para extrair uma lista de instalações (facilities) com base em uma lista padrão." },
                 { role: "user", content: `Lista Padrão de Instalações: ${JSON.stringify(MASTER_FACILITIES_LIST_FOR_AI)}. Analise o texto a seguir e retorne os códigos de todas as instalações encontradas: "${hotelText}"` }

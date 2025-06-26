@@ -15,7 +15,7 @@ export async function extractRoomTypeCode(roomName) {
 
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-4o",
+            model: "gpt-3.5-turbo",
             messages: [
                 {
                     role: "system",
