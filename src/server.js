@@ -1,19 +1,14 @@
 import "dotenv/config";
 import express from "express";
-import normalizeRouter from './routes/normalize.route.js'
+import normalizeRouter from "./routes/normalize.route.js";
 
 const app = express();
+app.use(express.json({ limit: "50mb" }));
 
-// Middleware
-app.use(express.json({limit: '50mb'})); 
-// Aumenta o limite de tamanho do corpo da requisição
-
-// rotas
-app.get("/", (req, res) => res.send("Normalizer Service is running!"));
+app.get("/", (req, res) => res.send("Serviço de Normalização está no ar!"));
 app.use("/api", normalizeRouter);
 
-// Inicia o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando com sucesso`);
-})
+  console.log(`🚀 Servidor rodando em com sucesso!`);
+});
