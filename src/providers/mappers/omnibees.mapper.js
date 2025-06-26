@@ -1,105 +1,109 @@
 import get from "lodash.get";
+import { extractAmenities } from "../../strategies/amenity-extractor.agent.js";
+import { extractRoomTypeCode } from "../../strategies/room-type-extractor.agent.js";
+import { extractFacilities } from "../../strategies/facility-extractor.agent.js";
+import { extractOccupancyCode } from "../../strategies/occupancy-extractor.agent.js";
+import { omnibeesBoardDictionary } from "../omnibees/dictionaries/board.dictionary.js";
+import { omnibeesCurrencyDictionary } from "../omnibees/dictionaries/currency.dictionary.js";
 
-// versao atualizada do mapCurrencyCode p ficar dinamica
-function mapCurrencyCode(code) {
-  const currencyMap = {
-    9: 'BRL',
-    16: 'USD',
-    978: 'EUR',
-  };
-  return currencyMap[code] || null;
-}
-
-
-function generateFlatOfferList(hotelsRawData) {
-  return hotelsRawData.reduce((acc, hotelData) => {
-    const roomTypesMap = new Map(hotelData.RoomTypes.map(rt => [rt.RoomID, rt]));
-    const ratePlansMap = new Map(hotelData.RatePlans.map(rp => [rp.RatePlanID, rp]));
-
-    if (hotelData.RoomRates) {
-      for (const roomRate of hotelData.RoomRates) {
-        const ratePlan = ratePlansMap.get(roomRate.RatePlanID) || {};
-        const roomType = roomTypesMap.get(roomRate.RoomID) || {};
-        const cancellationPolicy = get(ratePlan, 'CancelPenalties[0]', {});
-
-        const offer = {
-          hotelId: String(get(hotelData, 'BasicPropertyInfo.HotelRef.HotelCode')),
-          hotelTitle: get(hotelData, 'BasicPropertyInfo.HotelRef.HotelName'),
-          hotelAddress: get(hotelData, 'BasicPropertyInfo.Address.AddressLine'),
-          hotelCoordinates: `${get(hotelData, 'BasicPropertyInfo.Position.Latitude')},${get(hotelData, 'BasicPropertyInfo.Position.Longitude')}`,
-          hotelStar: get(hotelData, 'BasicPropertyInfo.Award.Rating', null),
-          hotelImage: get(hotelData, 'BasicPropertyInfo.ImageURL', null),
-          hotelChain: get(hotelData, 'BasicPropertyInfo.HotelRef.ChainName', null),
-          hotelZone: get(hotelData, 'BasicPropertyInfo.Address.ZoneCode', null),
-          hotelConnector: get(hotelData, 'TPA_Extensions.SupplierCode', 'Omnibees'),
-          
-          price: get(roomRate, 'Total.AmountBeforeTax', 0),
-          currency: mapCurrencyCode(get(roomRate, 'Total.CurrencyCode')),
-          total: get(roomRate, 'Total.AmountAfterTax', 0),
-          taxes: get(roomRate, 'Total.Taxes', null),
-          payment: (get(ratePlan, 'PaymentPolicies.AcceptedPayments') || []).map(p => p.GuaranteeTypeCode).join(', '),
-          cancellation: {
-            deadline: get(cancellationPolicy, 'DeadLine.OffsetUnitMultiplier', null),
-            amount: get(cancellationPolicy, 'AmountPercent.Amount', null),
-            percent: get(cancellationPolicy, 'AmountPercent.Percent', null),
-            currency: mapCurrencyCode(get(cancellationPolicy, 'AmountPercent.CurrencyCode', null)),
-            name: get(cancellationPolicy, 'PenaltyDescription.Name', null),
-            from: 'supplier',
-            description: get(cancellationPolicy, 'PenaltyDescription.Description', null),
-          },
-          board: get(ratePlan, 'MealsIncluded.MealPlanCode', null),
-          room: get(roomType, 'RoomName', 'N/A'),
-          allotment: get(roomRate, 'RatesType.Rates[0].NumberOfUnits', null),
-          markup: !!get(ratePlan, 'TPA_Extensions.Markup.Percent'),
-          package: !!get(ratePlan, 'TPA_Extensions.Package'),
-          amenities: (get(ratePlan, 'RatePlanInclusions') || []).map(inc => inc.ID),
-        };
-        acc.push(offer);
-      }
-    }
-    return acc;
-  }, []);
-}
-
-function groupOffersByHotelId(flatOfferList) {
-    const hotelsMap = new Map();
-
-    for (const offer of flatOfferList) {
-        const { hotelId, hotelTitle, hotelAddress, hotelCoordinates, hotelStar, hotelImage, hotelChain, hotelZone, hotelConnector, amenities, ...offerDetails } = offer;
-
-        if (!hotelsMap.has(hotelId)) {
-            hotelsMap.set(hotelId, {
-                id: hotelId,
-                title: hotelTitle,
-                address: hotelAddress,
-                coordinates: hotelCoordinates,
-                star: hotelStar,
-                image: hotelImage,
-                chain: hotelChain,
-                zone: hotelZone,
-                connector: hotelConnector,
-                amenities: [],
-                offers: [],
-            });
+function getHotelTextForAnalysis(hotelData) {
+    const uniqueTexts = new Set();
+    const ratePlans = get(hotelData, 'RatePlans', []);
+    for (const ratePlan of ratePlans) {
+        const inclusions = get(ratePlan, 'RatePlanInclusions') || [];
+        for (const inclusion of inclusions) {
+            const name = get(inclusion, 'RatePlanInclusionDesciption.Name');
+            const description = get(inclusion, 'RatePlanInclusionDesciption.Description');
+            if (name) uniqueTexts.add(name.trim());
+            if (description) uniqueTexts.add(description.trim());
         }
-
-        const hotelEntry = hotelsMap.get(hotelId);
-        hotelEntry.offers.push(offerDetails);
-        
-        const existingAmenities = new Set(hotelEntry.amenities);
-        amenities.forEach(amenity => existingAmenities.add(amenity));
-        hotelEntry.amenities = Array.from(existingAmenities);
     }
-
-    // Retorna a lista de hotéis agrupados
-    return Array.from(hotelsMap.values());
+    return Array.from(uniqueTexts).join(' . ');
 }
 
-// --- Função Principal do Mapeador ---
-function mapAndGroupOmnibees(hotelsRawData) {
-    const flatList = generateFlatOfferList(hotelsRawData);
-    const groupedList = groupOffersByHotelId(flatList);
-    return groupedList;
+async function mapAndGroupOmnibees(hotelsRawData) {
+    const processedHotels = await Promise.all(
+        hotelsRawData.map(async (hotelData) => {
+            const hotelText = getHotelTextForAnalysis(hotelData);
+            const facilities = await extractFacilities(hotelText);
+
+            const roomTypesMap = new Map((hotelData.RoomTypes || []).map(rt => [rt.RoomID, rt]));
+            const ratePlansMap = new Map((hotelData.RatePlans || []).map(rp => [rp.RatePlanID, rp]));
+            const roomsMap = new Map();
+
+            for (const roomType of roomTypesMap.values()) {
+                const roomCode = String(roomType.RoomID);
+                const roomName = get(roomType, 'RoomName', 'N/A');
+                const maxOccupancy = get(roomType, 'MaxOccupancy');
+                const description = get(roomType, 'RoomDescription.Description', null);
+                // console.log(`Description ${description}`)
+                
+                const [amenityCodes, standardTypeCode, standardOccupancyCode] = await Promise.all([
+                    extractAmenities(roomName, description),
+                    extractRoomTypeCode(roomName),
+                    extractOccupancyCode(roomName, maxOccupancy)
+                ]);
+                
+                roomsMap.set(roomCode, {
+                    type: standardTypeCode,
+                    occupancy: standardOccupancyCode,
+                    name: roomName,
+                    amenities: amenityCodes, 
+                    rates: [],
+                });
+            }
+
+            if (hotelData.RoomRates) {
+                for (const roomRate of hotelData.RoomRates) {
+                    const roomCode = String(roomRate.RoomID);
+                    if (roomsMap.has(roomCode)) {
+                        const ratePlan = ratePlansMap.get(roomRate.RatePlanID) || {};
+                        const cancellationPolicy = get(ratePlan, 'CancelPenalties[0]', {});
+                        const providerBoardCode = get(ratePlan, 'MealsIncluded.MealPlanCode', null);
+                        
+                        roomsMap.get(roomCode).rates.push({
+                            rate_id: `R${roomRate.RoomID}-P${roomRate.RatePlanID}`,
+                            board: omnibeesBoardDictionary.get(providerBoardCode) || null,
+                            price: {
+                                net: get(roomRate, 'Total.AmountBeforeTax', 0),
+                                total: get(roomRate, 'Total.AmountAfterTax', 0),
+                                markup: get(ratePlan, 'TPA_Extensions.Markup.Percent', null),
+                                commission: get(ratePlan, 'Commission.Percent', null),
+                                currency: omnibeesCurrencyDictionary.get(get(ratePlan, 'CurrencyCode', null)),
+                            },
+                            payment: get(ratePlan, 'Guarantees[0].GuaranteesAcceptedType.GuaranteesAccepted[0].GuaranteeTypeCode') ? `GT${get(ratePlan, 'Guarantees[0].GuaranteesAcceptedType.GuaranteesAccepted[0].GuaranteeTypeCode')}` : null,
+                            cancellation: {
+                                amount: get(cancellationPolicy, 'AmountPercent.Amount', null),
+                                from: get(cancellationPolicy, 'Start', null),
+                                deadline: get(cancellationPolicy, 'DeadLine.AbsoluteDeadline', null)
+                            },
+                            allotment: get(roomRate, 'RatesType.Rates[0].NumberOfUnits', null),
+                        });
+                    }
+                }
+            }
+            
+            const basicInfo = hotelData.BasicPropertyInfo;
+            return {
+                id: `HT${get(basicInfo, 'HotelRef.HotelCode')}`,
+                name: get(basicInfo, 'HotelRef.HotelName'),
+                chain: { id: String(get(basicInfo, 'HotelRef.ChainCode')), name: get(basicInfo, 'HotelRef.ChainName') },
+                stars: get(basicInfo, 'Award.Rating', 0),
+                address: {
+                    street: get(basicInfo, 'Address.AddressLine'),
+                    neighborhood: null, city: get(basicInfo, 'Address.CityName'),
+                    state: get(basicInfo, 'Address.StateProv'), country: get(basicInfo, 'Address.CountryName'),
+                    zipcode: get(basicInfo, 'Address.PostalCode'),
+                    coordinates: { lat: parseFloat(get(basicInfo, 'Position.Latitude', 0)), lng: parseFloat(get(basicInfo, 'Position.Longitude', 0)) }
+                },
+                connector: "Omnibees",
+                images: [get(basicInfo, 'ImageURL')].filter(Boolean),
+                facilities: facilities,
+                rooms: Array.from(roomsMap.values()).filter(room => room.rates.length > 0),
+            };
+        })
+    );
+    return { hotel: processedHotels };
 }
 
 export const omnibeesMapper = {
