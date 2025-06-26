@@ -38,7 +38,7 @@ export async function extractAmenities(roomName, description) {
     
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo", // Usando o modelo econômico
+            model: "gpt-4o-mini", // Usando o modelo econômico
             response_format: { type: "json_object" },
             messages: [
                 {

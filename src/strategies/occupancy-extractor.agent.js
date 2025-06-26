@@ -7,7 +7,7 @@ export async function extractOccupancyCode(roomName, maxOccupancy) {
 
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4o-mini",
             messages: [
                 { role: "system", content: "Você analisa o nome de um quarto e sua capacidade máxima para determinar o código de ocupação correto a partir de uma lista padrão. A diferença entre 'Double' (D2) e 'Twin' (T2) é importante." },
                 { role: "user", content: `Lista Padrão de Ocupação: ${JSON.stringify(MASTER_OCCUPANCY_LIST_FOR_AI)}. Nome do Quarto: "${roomName}". Capacidade Máxima: ${maxOccupancy}. Qual o código de ocupação mais apropriado?` }
