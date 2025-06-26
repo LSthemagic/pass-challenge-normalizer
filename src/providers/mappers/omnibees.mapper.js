@@ -40,18 +40,16 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                 const maxOccupancy = get(roomType, 'MaxOccupancy');
                 const description = get(roomType, 'RoomDescription.Description', null);
                 // console.log(`Description ${description}`)
-                
                 const [amenityCodes, standardTypeCode, standardOccupancyCode] = await Promise.all([
                     extractAmenities(roomName, description),
                     extractRoomTypeCode(roomName),
                     extractOccupancyCode(roomName, maxOccupancy)
                 ]);
-                
                 roomsMap.set(roomCode, {
                     type: standardTypeCode,
                     occupancy: standardOccupancyCode,
                     name: roomName,
-                    amenities: amenityCodes, 
+                    amenities: amenityCodes,
                     rates: [],
                 });
             }
@@ -64,16 +62,13 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                         const cancellationPolicy = get(ratePlan, 'CancelPenalties[0]', {});
                         const providerBoardCode = get(ratePlan, 'MealsIncluded.MealPlanCode', null);
                         const acceptedPaymentsRaw = get(ratePlan, 'PaymentPolicies.AcceptedPayments', []);
-                        
                         const paymentMethods = new Set();
-
                         for (const payment of acceptedPaymentsRaw) {
                             const standardCode = omnibeesPaymentMethodDictionary.get(payment.GuaranteeTypeCode);
                             if (standardCode) {
                                 paymentMethods.add(standardCode);
                             }
                         }
-                        
                         roomsMap.get(roomCode).rates.push({
                             rate_id: `R${roomRate.RoomID}-P${roomRate.RatePlanID}`,
                             board: omnibeesBoardDictionary.get(providerBoardCode) || null,
@@ -95,7 +90,8 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                     }
                 }
             }
-            
+
+
             const basicInfo = hotelData.BasicPropertyInfo;
             const providerCountryCode = get(basicInfo, 'Address.CountryCode');
             const standardCountryCode = omnibeesCountryDictionary.get(providerCountryCode);

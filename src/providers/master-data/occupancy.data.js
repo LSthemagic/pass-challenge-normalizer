@@ -1,4 +1,3 @@
-// providers/master-data/occupancy.data.js
 export const occupancyMap = new Map(Object.entries({
     "BV": "Bungalow/Villa (Capacidade variável)",
     "D2": "Double (2 pessoas)",
