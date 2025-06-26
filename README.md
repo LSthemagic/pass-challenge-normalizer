@@ -2,7 +2,7 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-green?style=for-the-badge&logo=node.js)
 ![Express.js](https://img.shields.io/badge/Express.js-4.x-_?style=for-the-badge&logo=express)
-![JavaScript](https://img.shields.io/badge/JavaScript-ESM-yellow?style=for-the-badge&logo=javascript)
+![JavaScript](https://img.shields.io/badge/JavaScript-ESM-yellow?style=for-the-badge&logo=javascript) 
 
 Serviço de middleware construído em Node.js e Express.js, projetado para receber dados de múltiplas APIs de provedores de hotelaria, normalizando-os em um formato JSON único, consistente e hierárquico.
 
