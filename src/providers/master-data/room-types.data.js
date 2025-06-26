@@ -20,3 +20,6 @@ export const roomTypesMap = new Map(Object.entries({
     "TW": "Twin (Quarto com duas camas de solteiro)",
     "VL": "Villa (Casa privativa dentro do hotel ou resort)"
 }));
+
+export const MASTER_ROOM_TYPE_LIST_FOR_AI = Array.from(roomTypesMap.entries())
+    .map(([code, name]) => ({ code, name }));

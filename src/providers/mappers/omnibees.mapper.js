@@ -6,6 +6,8 @@ import { extractOccupancyCode } from "../../strategies/occupancy-extractor.agent
 import { omnibeesBoardDictionary } from "../omnibees/dictionaries/board.dictionary.js";
 import { omnibeesCurrencyDictionary } from "../omnibees/dictionaries/currency.dictionary.js";
 import { omnibeesPaymentMethodDictionary } from "../omnibees/dictionaries/payment-methods.dictionary.js";
+import { omnibeesCountryDictionary } from "../omnibees/dictionaries/country.dictionary.js";
+import * as mappingService from '../../services/mapping.service.js';
 
 function getHotelTextForAnalysis(hotelData) {
     const uniqueTexts = new Set();
@@ -95,6 +97,8 @@ async function mapAndGroupOmnibees(hotelsRawData) {
             }
             
             const basicInfo = hotelData.BasicPropertyInfo;
+            const providerCountryCode = get(basicInfo, 'Address.CountryCode');
+            const standardCountryCode = omnibeesCountryDictionary.get(providerCountryCode);
             return {
                 id: `HT${get(basicInfo, 'HotelRef.HotelCode')}`,
                 name: get(basicInfo, 'HotelRef.HotelName'),
@@ -104,6 +108,7 @@ async function mapAndGroupOmnibees(hotelsRawData) {
                     street: get(basicInfo, 'Address.AddressLine'),
                     neighborhood: null, city: get(basicInfo, 'Address.CityName'),
                     state: get(basicInfo, 'Address.StateProv'), country: get(basicInfo, 'Address.CountryName'),
+                    country: mappingService.getCountryName(standardCountryCode),
                     zipcode: get(basicInfo, 'Address.PostalCode'),
                     coordinates: { lat: parseFloat(get(basicInfo, 'Position.Latitude', 0)), lng: parseFloat(get(basicInfo, 'Position.Longitude', 0)) }
                 },
