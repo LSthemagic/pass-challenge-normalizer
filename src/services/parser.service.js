@@ -1,13 +1,8 @@
-// services/parser.service.js
-
 import * as masterData from '../providers/master-data/index.js'; // Importa todos os dados mestres
 
-/**
- * Extrai códigos de uma lista mestra com base em palavras-chave encontradas em um texto.
- * @param {string} textToAnalyze O texto completo a ser analisado.
- * @param {Map<string, string>} masterMap O mapa de dados mestre (código -> nome).
- * @returns {string[]} Um array de códigos encontrados.
- */
+export const PRIORITY_FACILITIES = ["POL", "SPA", "WIFI", "PARK"];
+export const PRIORITY_AMENITIES = ["BEDS", "SHWR", "SAFE", "TV", "WIFI"];
+
 function extractCodesByKeywords(textToAnalyze, masterMap) {
     if (!textToAnalyze || !masterMap) return [];
 
@@ -23,24 +18,17 @@ function extractCodesByKeywords(textToAnalyze, masterMap) {
     return Array.from(foundCodes);
 }
 
-/**
- * Extrai os códigos de AMENITIES de um texto.
- */
 export function extractAmenities(roomName, description) {
     const text = `${roomName || ''} ${description || ''}`;
     return extractCodesByKeywords(text, masterData.amenitiesMap);
 }
 
-/**
- * Extrai os códigos de FACILITIES de um texto.
- */
+
 export function extractFacilities(hotelText) {
     return extractCodesByKeywords(hotelText, masterData.facilitiesMap);
 }
 
-/**
- * Extrai o CÓDIGO DO TIPO DE QUARTO com base em palavras-chave priorizadas.
- */
+
 export function extractRoomTypeCode(roomName) {
     if (!roomName) return null;
     const text = roomName.toLowerCase();
@@ -86,16 +74,7 @@ export function extractRoomTypeCode(roomName) {
     return null;
 }
 
-/**
- * Extrai o CÓDIGO DE OCUPAÇÃO com base em regras do nome e da capacidade.
- */
-/**
- * Extrai o CÓDIGO DE OCUPAÇÃO usando uma lógica de regras priorizadas
- * para uma classificação mais precisa.
- * @param {string | null} roomName O nome do quarto (ex: "Double or Twin SUPERIOR").
- * @param {number | null} maxOccupancy A capacidade máxima de hóspedes.
- * @returns {string | null} O código de ocupação padrão (ex: "T2", "D2").
- */
+
 export function extractOccupancyCode(roomName, maxOccupancy) {
     const text = roomName ? roomName.toLowerCase() : '';
 
@@ -130,4 +109,31 @@ export function extractOccupancyCode(roomName, maxOccupancy) {
         default:
             return null;
     }
+}
+
+export function getPriorityPaymentMethod(availableMethods) {
+    if (!availableMethods || availableMethods.size === 0) {
+        return null;
+    }
+    // Define a ordem de preferência.
+    const priorityOrder = [
+        'credit-card',
+        'pix',
+        'apple-pay',
+        'google-pay',
+        'paypal',
+        'bank-slip', // Boleto
+        'debit-card',
+        'bank-transfer',
+        'voucher',
+    ];
+
+    for (const method of priorityOrder) {
+        if (availableMethods.has(method)) {
+            return method; // Retorna o primeiro método da lista de prioridade que for encontrado.
+        }
+    }
+    
+    // Se nenhum dos prioritários for encontrado, retorna o primeiro que estiver disponível.
+    return availableMethods.values().next().value;
 }

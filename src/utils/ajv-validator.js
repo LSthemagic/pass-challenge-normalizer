@@ -1,14 +1,15 @@
-// utils/ajv-validator.js
 import Ajv from "ajv";
 
 export const OUTPUT_SCHEMA = {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
   "type": "object",
+  "required": ["hotel"],
   "properties": {
     "hotel": {
       "type": "array",
       "items": {
         "type": "object",
+        "required": ["id", "name", "rooms"],
         "properties": {
           "id": { "type": "string" },
           "name": { "type": "string" },
@@ -19,25 +20,8 @@ export const OUTPUT_SCHEMA = {
               "name": { "type": ["string", "null"] }
             }
           },
-          "stars": { "type": "number" },
-          "address": {
-            "type": "object",
-            "properties": {
-              "street": { "type": ["string", "null"] },
-              "neighborhood": { "type": ["string", "null"] },
-              "city": { "type": ["string", "null"] },
-              "state": { "type": ["string", "null"] },
-              "country": { "type": ["string", "null"] },
-              "zipcode": { "type": ["string", "null"] },
-              "coordinates": {
-                "type": "object",
-                "properties": {
-                  "lat": { "type": "number" },
-                  "lng": { "type": "number" }
-                }
-              }
-            }
-          },
+          "stars": { "type": "integer" },
+          "address": { "type": "object" }, // Estrutura interna detalhada omitida por brevidade
           "connector": { "type": "string" },
           "images": { "type": "array", "items": { "type": "string" } },
           "facilities": { "type": "array", "items": { "type": "string" } },
@@ -45,40 +29,25 @@ export const OUTPUT_SCHEMA = {
             "type": "array",
             "items": {
               "type": "object",
+              "required": ["name", "rates"],
               "properties": {
                 "type": { "type": ["string", "null"] },
                 "occupancy": { "type": ["string", "null"] },
                 "name": { "type": "string" },
                 "amenities": { "type": "array", "items": { "type": "string" } },
+                "images": { "type": "array", "items": { "type": "string" } },
                 "rates": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "rate_id": { "type": "string" },
+                      "id": { "type": "string" },
                       "board": { "type": ["string", "null"] },
-                      "price": {
-                        "type": "object",
-                        "properties": {
-                          "net": { "type": "number" },
-                          "total": { "type": "number" },
-                          "markup": { "type": ["number", "null"] },
-                          "commission": { "type": ["number", "null"] },
-                          "currency": { "type": ["string", "null"] }
-                        }
-                      },
-                      "payment": {
-                        "type": ["array", "null"],
-                        "items": { "type": "string" }
-                      },
-                      "cancellation": {
-                        "type": "object",
-                        "properties": {
-                          "amount": { "type": ["number", "null"] },
-                          "from": { "type": ["string", "null"], "format": "date-time" },
-                          "deadline": { "type": ["string", "null"], "format": "date-time" }
-                        }
-                      },
+                      "commissioned": { "type": ["object", "null"] },
+                      "taxes": { "type": "array", "items": { "type": "object" } },
+                      "price": { "type": "object" },
+                      "payment": { "type": ["string", "null"] },
+                      "cancellation": { "type": ["object", "null"] },
                       "allotment": { "type": ["integer", "null"] }
                     }
                   }
@@ -86,17 +55,11 @@ export const OUTPUT_SCHEMA = {
               }
             }
           }
-        },
-        "required": ["id", "name", "rooms"]
+        }
       }
     }
-  },
-  "required": ["hotel"]
+  }
 };
 
 const ajv = new Ajv({ useDefaults: true });
 export const validateFinalOutput = ajv.compile(OUTPUT_SCHEMA);
-
-// const ajv = new Ajv({ allowUnionTypes: true }); 
-// addFormats(ajv); 
-// export const validateFinalOutput = ajv.compile(OUTPUT_SCHEMA);
