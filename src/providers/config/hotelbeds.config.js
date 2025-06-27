@@ -1,6 +1,6 @@
 export const hotelBedsConfig = {
     // Caminho para o array principal de hotéis
-    hotelArrayPath: "hotels.hotels",
+    hotelArrayPath: "hotels",
 
     // Caminho para o array de serviços/extras
     // extrasArrayPath: "Services",

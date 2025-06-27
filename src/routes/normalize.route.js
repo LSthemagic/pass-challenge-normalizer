@@ -1,11 +1,13 @@
 import { Router } from "express";
 import { runNormalizationPipeline } from "../strategies/orchestrator.js";
+import { and } from "ajv/dist/compile/codegen/index.js";
 
 const router = Router();
 
 router.post("/normalize", async (req, res) => {
   try {
-    const { provider, rawData } = req.body;
+    const { provider, hotels, rawData = hotels } = req.body;
+    
     if (!rawData || !provider) {
       return res.status(400).json({ error: "As chaves 'provider' e 'rawData' são obrigatórias." });
     }
