@@ -1,24 +1,32 @@
-import { Router } from "express";
-import { runNormalizationPipeline } from "../../strategies/orchestrator.js";
-import { and } from "ajv/dist/compile/codegen/index.js";
+import { runNormalizationPipeline } from '../../core/strategies/orchestrator.js'; // Ajuste o caminho se necessário
+import { normalizeSchema } from './normalize.schemas.js';
 
-const router = Router();
+/**
+ * Define as rotas para a funcionalidade de normalização.
+ * Esta função é um plugin do Fastify.
+ * @param {import('fastify').FastifyInstance} fastify - A instância do Fastify.
+ * @param {object} options - Opções do plugin.
+ */
+async function normalizeRoutes(fastify, options) {
 
-router.post("/normalize", async (req, res) => {
-  try {
-    const { provider, hotels, rawData = hotels } = req.body;
+  // Define a rota POST /normalize com o schema de validação
+  fastify.post('/normalize', { schema: normalizeSchema }, async (request, reply) => {
+    //
+    // Se o código chegou até aqui, o Fastify JÁ VALIDOU o request.body.
+    // Você tem a garantia de que 'provider' e 'rawData' existem.
+    // O bloco try...catch não é mais necessário para erros 500.
+    //
+    const { provider, hotels, rawData = hotels } = request.body;
     
-    if (!rawData || !provider) {
-      return res.status(400).json({ error: "As chaves 'provider' e 'rawData' são obrigatórias." });
-    }
+    // A lógica de negócio permanece a mesma.
+    // Se 'runNormalizationPipeline' lançar um erro, o Fastify o capturará
+    // e retornará uma resposta de erro 500 padronizada.
     const result = await runNormalizationPipeline(rawData, provider);
-    return res.status(200).json(result);
+    
+    // Em caso de sucesso, basta retornar o resultado.
+    // O Fastify se encarrega de enviar o status 200 e o JSON.
+    return result;
+  });
+}
 
-  } catch (err) {
-    console.error("🚨 Erro na rota /normalize:", err);
-    const errorMessage = err instanceof Error ? err.message : String(err);
-    return res.status(500).json({ error: "Erro interno no servidor.", details: errorMessage });
-  }
-});
-
-export default router;
+export default normalizeRoutes;
