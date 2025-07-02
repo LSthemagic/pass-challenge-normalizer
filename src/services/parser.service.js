@@ -1,4 +1,4 @@
-import * as masterData from '../providers/master-data/index.js'; // Importa todos os dados mestres
+import * as masterData from '../core/master-data/index.js'; // Importa todos os dados mestres
 
 export const PRIORITY_FACILITIES = ["POL", "SPA", "WIFI", "PARK"];
 export const PRIORITY_AMENITIES = ["BEDS", "SHWR", "SAFE", "TV", "WIFI"];
@@ -10,7 +10,6 @@ function extractCodesByKeywords(textToAnalyze, masterMap) {
     const foundCodes = new Set();
 
     for (const [code, name] of masterMap.entries()) {
-        // Verifica se o nome da amenidade/facilidade está presente no texto
         if (text.includes(name.toLowerCase())) {
             foundCodes.add(code);
         }

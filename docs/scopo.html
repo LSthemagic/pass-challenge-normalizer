@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Connect - Integration Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 
+        Chosen Palette: Warm Neutrals (Slate, Zinc, Stone) com um toque de Âmbar para acentos.
+        Application Structure Plan: Uma abordagem de painel de controle com abas (Dashboard, Dicionários, Sandbox). Esta estrutura foi escolhida para traduzir a especificação técnica da API em uma ferramenta de gerenciamento funcional. Em vez de apenas ler sobre a API, o usuário pode interagir com suas regras (Dicionários) e testar seus resultados (Sandbox), tornando o entendimento e a manutenção muito mais intuitivos.
+        Visualization & Content Choices: 
+        - Dashboard: Cards de estatísticas (Goal: Informar) e um gráfico de rosca com Chart.js (Goal: Comparar status) para uma visão geral rápida.
+        - Dicionários: Uma tabela interativa com dropdowns (Goal: Organizar/Editar) para gerenciar os mapeamentos de forma visual, o que é mais claro do que editar arquivos de código.
+        - Sandbox: Um layout de duas colunas com textareas (Goal: Testar/Validar) para permitir que o usuário veja o processo de normalização em ação, conectando diretamente a entrada do provedor com a saída padrão do Pass Connect.
+        CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .tab-button.active {
+            border-bottom-color: #f59e0b; /* amber-500 */
+            color: #18181b; /* zinc-900 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-slate-900">
+                    <span class="text-amber-500">Pass</span> Connect - Integration Hub
+                </h1>
+                <button class="text-sm font-medium text-slate-600 hover:text-amber-600">Sair</button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex">
+                    <button onclick="showTab('dashboard')" class="tab-button active py-3 px-4 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-colors duration-200">Dashboard</button>
+                    <button onclick="showTab('dictionaries')" class="tab-button py-3 px-4 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-colors duration-200">Dicionários</button>
+                    <button onclick="showTab('sandbox')" class="tab-button py-3 px-4 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 transition-colors duration-200">Sandbox</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content">
+                <h2 class="text-2xl font-semibold text-slate-900 mb-6">Painel Principal</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Stat Cards -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-sm font-medium text-slate-500">Provedores Ativos</h3>
+                        <p class="mt-2 text-3xl font-bold text-slate-900">2</p>
+                        <p class="text-xs text-slate-400">Omnibees, Hotelbeds</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-sm font-medium text-slate-500">Mapeamentos Totais</h3>
+                        <p class="mt-2 text-3xl font-bold text-slate-900">25+</p>
+                        <p class="text-xs text-slate-400">Regras de tradução configuradas</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-sm font-medium text-slate-500">Status da API (24h)</h3>
+                        <div class="chart-container relative h-24 mt-2">
+                           <canvas id="apiStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dictionaries Tab -->
+            <div id="dictionaries" class="tab-content hidden">
+                <h2 class="text-2xl font-semibold text-slate-900 mb-6">Gerenciador de Dicionários</h2>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex flex-col md:flex-row gap-4 mb-6">
+                        <div class="flex-1">
+                            <label for="provider-select" class="block text-sm font-medium text-slate-700">Provedor</label>
+                            <select id="provider-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-slate-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                                <option>Omnibees</option>
+                                <option>Hotelbeds</option>
+                            </select>
+                        </div>
+                        <div class="flex-1">
+                            <label for="dictionary-select" class="block text-sm font-medium text-slate-700">Dicionário</label>
+                            <select id="dictionary-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-slate-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                                <option>Regimes de Alimentação (Board)</option>
+                                <option>Métodos de Pagamento</option>
+                                <option>Moedas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-slate-200">
+                            <thead class="bg-slate-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Código do Provedor</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Nome no Provedor</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Código Padrão PASS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dictionary-table-body" class="bg-white divide-y divide-slate-200">
+                                <!-- Linhas da tabela serão inseridas aqui via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="mt-6 flex justify-end">
+                        <button class="bg-amber-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">Salvar Alterações</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sandbox Tab -->
+            <div id="sandbox" class="tab-content hidden">
+                <h2 class="text-2xl font-semibold text-slate-900 mb-6">Sandbox de Normalização</h2>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center mb-4">
+                        <label for="sandbox-provider" class="text-sm font-medium text-slate-700 mr-4">Provedor:</label>
+                        <select id="sandbox-provider" class="w-48 block pl-3 pr-10 py-2 text-base border-slate-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md">
+                            <option value="omnibees">Omnibees</option>
+                            <option value="hotelbeds">Hotelbeds</option>
+                        </select>
+                        <button onclick="runNormalization()" class="ml-auto bg-slate-800 text-white px-4 py-2 rounded-md shadow-sm hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500">Normalizar Agora</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="raw-json-input" class="block text-sm font-medium text-slate-700">Entrada (JSON do Provedor)</label>
+                            <textarea id="raw-json-input" rows="20" class="mt-1 block w-full text-xs font-mono p-3 border border-slate-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500"></textarea>
+                        </div>
+                         <div>
+                            <label for="normalized-json-output" class="block text-sm font-medium text-slate-700">Saída (JSON Normalizado)</label>
+                            <textarea id="normalized-json-output" rows="20" readonly class="bg-slate-100 mt-1 block w-full text-xs font-mono p-3 border border-slate-300 rounded-md shadow-sm"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        function showTab(tabId) {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('onclick').includes(tabId)) {
+                    tab.classList.add('active');
+                }
+            });
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                if (content.id === tabId) {
+                    content.classList.remove('hidden');
+                }
+            });
+        }
+
+        // --- Gráfico do Dashboard ---
+        const ctx = document.getElementById('apiStatusChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Sucesso', 'Falha'],
+                datasets: [{
+                    data: [98, 2],
+                    backgroundColor: ['#22c55e', '#ef4444'],
+                    borderColor: ['#ffffff', '#ffffff'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '80%',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                }
+            }
+        });
+
+        // --- Lógica do Dicionário ---
+        const dictionaryData = {
+            "Regimes de Alimentação (Board)": [
+                { provider: '3', providerName: 'BedBreakfast', pass: 'BB (Bed & Breakfast)' },
+                { provider: '10', providerName: 'FullBoard', pass: 'FB (Full Board)' },
+                { provider: '12', providerName: 'HalfBoard', pass: 'HB (Half Board)' },
+            ],
+            // Outros dicionários podem ser adicionados aqui
+        };
+
+        function populateDictionaryTable() {
+            const tbody = document.getElementById('dictionary-table-body');
+            tbody.innerHTML = ''; // Limpa a tabela
+            const selectedData = dictionaryData["Regimes de Alimentação (Board)"];
+            
+            selectedData.forEach(item => {
+                const row = `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900">${item.provider}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">${item.providerName}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                            <select class="w-full border-slate-300 rounded-md">
+                                <option selected>${item.pass}</option>
+                                <option>RO (Room Only)</option>
+                                <option>AI (All Inclusive)</option>
+                            </select>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+        populateDictionaryTable();
+
+        // --- Lógica do Sandbox (Simulação) ---
+        function runNormalization() {
+            const rawInput = document.getElementById('raw-json-input').value;
+            const outputTextarea = document.getElementById('normalized-json-output');
+            
+            if (!rawInput.trim()) {
+                outputTextarea.value = 'Por favor, insira um JSON válido na entrada.';
+                return;
+            }
+
+            try {
+                const rawData = JSON.parse(rawInput);
+                
+                // Simulação da lógica do omnibees.mapper.js
+                // Usando lodash.get simulado para simplicidade
+                const get = (obj, path, def) => {
+                    const value = path.split('.').reduce((o, p) => (o && o[p] != null) ? o[p] : undefined, obj);
+                    return value === undefined ? def : value;
+                }
+
+                const hotelData = get(rawData, 'RoomStaysType.RoomStays[0]', {});
+                if (!hotelData) {
+                    outputTextarea.value = "Erro: Estrutura do JSON da Omnibees não encontrada. Verifique o caminho 'RoomStaysType.RoomStays'.";
+                    return;
+                }
+
+                // Simulação simplificada do mapeamento
+                const normalizedHotel = {
+                    id: `HT${get(hotelData, 'BasicPropertyInfo.HotelRef.HotelCode', '')}`,
+                    name: get(hotelData, 'BasicPropertyInfo.HotelRef.HotelName', ''),
+                    stars: get(hotelData, 'BasicPropertyInfo.Award.Rating', 0),
+                    address: {
+                        street: get(hotelData, 'BasicPropertyInfo.Address.AddressLine', ''),
+                        city: get(hotelData, 'BasicPropertyInfo.Address.CityName', ''),
+                        coordinates: {
+                            lat: parseFloat(get(hotelData, 'BasicPropertyInfo.Position.Latitude', 0)),
+                            lng: parseFloat(get(hotelData, 'BasicPropertyInfo.Position.Longitude', 0)),
+                        }
+                    },
+                    connector: "omnibees (simulado)",
+                    images: [get(hotelData, 'BasicPropertyInfo.ImageURL', '')].filter(Boolean),
+                    facilities: ["POL", "SPA"], // Simulado
+                    rooms: [
+                        {
+                           type: "SU", // Simulado
+                           occupancy: "D2", // Simulado
+                           name: get(hotelData, 'RoomTypes[0].RoomName', ''),
+                           amenities: ["BEDS", "SHWR", "TV"], // Simulado
+                           rates: [
+                               {
+                                   id: `R${get(hotelData, 'RoomRates[0].RoomID', '')}-P${get(hotelData, 'RoomRates[0].RatePlanID', '')}`,
+                                   board: "BB", // Simulado
+                                   price: {
+                                       net: get(hotelData, 'RoomRates[0].Total.AmountBeforeTax', 0),
+                                       total: get(hotelData, 'RoomRates[0].Total.AmountAfterTax', 0),
+                                       currency: "BRL" // Simulado
+                                   },
+                                   payment: "credit-card" // Simulado
+                               }
+                           ]
+                        }
+                    ]
+                };
+
+                const finalOutput = { hotel: [normalizedHotel] };
+
+                outputTextarea.value = JSON.stringify(finalOutput, null, 2);
+
+            } catch (error) {
+                outputTextarea.value = `Erro ao processar o JSON: ${error.message}`;
+            }
+        }
+        
+        // Exemplo de JSON para o sandbox
+        document.getElementById('raw-json-input').value = JSON.stringify({
+            "RoomStaysType": {
+                "RoomStays": [{
+                    "BasicPropertyInfo": {
+                        "HotelRef": { "HotelCode": 13175, "HotelName": "Hotel Estrelas da Serra" },
+                        "Award": { "Rating": 4 },
+                        "Address": { "AddressLine": "Av. Borges de Medeiros, 1313", "CityName": "Gramado" },
+                        "Position": { "Latitude": "-29.390215", "Longitude": "-50.873532" },
+                        "ImageURL": "https://example.com/image.jpg"
+                    },
+                    "RoomTypes": [{ "RoomID": 78937, "RoomName": "Standard" }],
+                    "RoomRates": [{
+                        "RoomID": 78937,
+                        "RatePlanID": 270252,
+                        "Total": { "AmountBeforeTax": 262.50, "AmountAfterTax": 280.00, "CurrencyCode": 9 }
+                    }]
+                }]
+            }
+        }, null, 2);
+
+
+    </script>
+</body>
+</html>

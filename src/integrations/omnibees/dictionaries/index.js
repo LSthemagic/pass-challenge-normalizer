@@ -1,0 +1,6 @@
+export * from "./board.dictionary.js"
+export * from "./card-flags.dictionary.js"
+export * from "./country.dictionary.js"
+export * from "./currency.dictionary.js"
+export * from "./languages.dictionaries.js"
+export * from "./payment-methods.dictionary.js"

@@ -1,0 +1,6903 @@
+[
+  {
+    "id": "HT13175",
+    "name": "Hotel Estrelas da Serra - Gramado",
+    "chain": {
+      "id": "7640",
+      "name": "Hotel Estrela da Serra"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av. Borges de Medeiros, 1313",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.390215,
+        "lng": -50.873532
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/13175/Property/745225.jpeg"
+    ],
+    "facilities": [
+      "PARK",
+      "WIFI"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Standard",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R78937-P270252",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 1312.5,
+              "total": 1312.5,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT15768",
+    "name": "Hotel Alpenhof",
+    "chain": {
+      "id": "7803",
+      "name": "HSYSTEM"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua Artur Reimann, 88 - Bairro: Jardim Bela Vista",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3757242,
+        "lng": -50.8655931
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/15768/Property/898195.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Quarto Triplo Standard",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R93518-P327878",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 1666.11,
+              "total": 1666.11,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 8
+          },
+          {
+            "id": "R93518-P327877",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 1866.02,
+              "total": 1866.02,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT12205",
+    "name": "Hotel Cabanas da Mata",
+    "chain": {
+      "id": "7059",
+      "name": "Hotel Cabanas da Mata"
+    },
+    "stars": 4,
+    "address": {
+      "street": "R. Gustavo Velp, 188",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -26.5228167,
+        "lng": -50.9714227
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/12205/Property/1318032.jpeg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "CB",
+        "occupancy": "T3",
+        "name": "Chalé Triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R72738-P392259",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 1800,
+              "total": 1816.4,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT12870",
+    "name": "Hotel Villa Aconchego",
+    "chain": {
+      "id": "7494",
+      "name": "Hotel Villa Aconchego "
+    },
+    "stars": 3,
+    "address": {
+      "street": "R. João Carniel, 654",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3604799,
+        "lng": -50.8504611
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/12870/Property/646665.jpg"
+    ],
+    "facilities": [
+      "PARK",
+      "WIFI"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R77221-P259426",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 1800,
+              "total": 1816.4,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8605",
+    "name": "Hotel Renascença",
+    "chain": {
+      "id": "4772",
+      "name": "Hotel Renascenca"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Av. Borges de Medeiros, 51",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3998658,
+        "lng": -50.8714083
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8605/Property/379208.jpg"
+    ],
+    "facilities": [
+      "POL",
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "LUXO SUPERIOR",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R53487-P457758",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 1984.5,
+              "total": 2199.35,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R53487-P466238",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2022.61,
+              "total": 2241.27,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R53487-P159169",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2116.8,
+              "total": 2344.88,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "bank-transfer",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "SUÍTE FAMILIA",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R53491-P457758",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3058.5,
+              "total": 3380.75,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R53491-P466238",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3117.21,
+              "total": 3445.33,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R53491-P159169",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3262.4,
+              "total": 3605.04,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "bank-transfer",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "LUXO TÉRREO",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R53538-P457758",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 1928.25,
+              "total": 2137.47,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53538-P466238",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 1965.26,
+              "total": 2178.19,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53538-P159169",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2056.8,
+              "total": 2278.88,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "bank-transfer",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8673",
+    "name": "Pousada Aardvark Inn - Rota Sul",
+    "chain": {
+      "id": "2282",
+      "name": "Rota Sul "
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua Mestre, 18",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.371808,
+        "lng": -50.882782
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8673/Property/382092.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "T3",
+        "name": "Suíte Triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R88379-P161198",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2048.3,
+              "total": 2048.3,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Quarto Família",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R88380-P161198",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2271.4,
+              "total": 2271.4,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT14237",
+    "name": "Hotel Aconchego da Serra",
+    "chain": {
+      "id": "8056",
+      "name": "Hotel Pousada Aconchego da Serra "
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua Silveira Martins, 210",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3588639,
+        "lng": -50.8474417
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/14237/Property/773522.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R85550-P300890",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo 2024",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2062.5,
+              "total": 2078.9,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 23
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Luxo Familia",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R85552-P300890",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo 2024",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2062.5,
+              "total": 2078.9,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT6458",
+    "name": "Hotel Bangalôs da Serra",
+    "chain": {
+      "id": "3514",
+      "name": "Hotel Bangalos da Serra"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Mozé Scur, 1511\r\nCP 205",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": 29.40174668949778,
+        "lng": 50.885623875236
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/6458/Property/224459.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "BG",
+        "occupancy": "Q4",
+        "name": "Bangalô Hortênsia",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R40616-P224068",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 2077.82,
+              "total": 2302,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 16
+          }
+        ]
+      },
+      {
+        "type": "BG",
+        "occupancy": "Q4",
+        "name": "Bangalô Araucária",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R40613-P224068",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3430.44,
+              "total": 3789.88,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "BG",
+        "occupancy": "Q4",
+        "name": "Bangalô Ipê",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R40615-P224068",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 2495.05,
+              "total": 2760.95,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "BG",
+        "occupancy": "Q4",
+        "name": "Bangalô Amor Perfeito",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R40614-P224068",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3120.16,
+              "total": 3448.58,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT12837",
+    "name": "Pousada Sonnenhof",
+    "chain": {
+      "id": "7442",
+      "name": "Pousada Sonnenhof"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua Nações Unidas, 191",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3856411,
+        "lng": -50.8857193
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/12837/Property/639357.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "AP",
+        "occupancy": "T3",
+        "name": "Apartamento Luxo Triplo Cama de Casal e Cama de So",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R76829-P477578",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2121,
+              "total": 2137.4,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8821",
+    "name": "Pousada Três Pinheiros Gramado",
+    "chain": {
+      "id": "4942",
+      "name": "Pousada Tres Pinheiros Gramado"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua F G Bier\r\n2088",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.400720911802026,
+        "lng": -50.87197988581457
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8821/Property/996689.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Quarto  Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R54954-P174460",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2346.73,
+              "total": 2363.13,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R54954-P393764",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2346.73,
+              "total": 2363.13,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R54954-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2346.73,
+              "total": 2363.13,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R54954-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3259.35,
+              "total": 3275.75,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "QD",
+        "occupancy": "Q4",
+        "name": "Quarto Quádruplo Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R54955-P174460",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2728.48,
+              "total": 2744.88,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54955-P393764",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2728.48,
+              "total": 2744.88,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54955-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2728.48,
+              "total": 2744.88,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54955-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3789.55,
+              "total": 3805.95,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Quarto Família",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R54957-P174460",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3167.53,
+              "total": 3183.93,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54957-P393764",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3167.53,
+              "total": 3183.93,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54957-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3167.53,
+              "total": 3183.93,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R54957-P467588",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4399.35,
+              "total": 4415.75,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT6069",
+    "name": "Hotel Pousada Kaster",
+    "chain": {
+      "id": "3311",
+      "name": "Hotel Pousada Kaster"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Av. das Hortênsias, 594",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3851142,
+        "lng": -50.8795176
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/6069/Property/1475561.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "DB",
+        "occupancy": "T3",
+        "name": "Luxo duplo",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R38122-P94952",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2437.5,
+              "total": 2437.5,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT1374",
+    "name": "Life Hotel Portal (Antigo Encantos Portal)",
+    "chain": {
+      "id": "1149",
+      "name": "Life Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Estr. Serrana, 235 - Planalto, Gramado - RS\r\nPlanalto",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3917447,
+        "lng": -50.884735
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/1374/Property/270957.JPG"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "LUXO TRIPLO CASAL",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R35622-P95988",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2479.7,
+              "total": 2496.1,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": "DB",
+        "occupancy": "Q4",
+        "name": "LUXO QUADRUPLO CASAL",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R35623-P95988",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3223.6,
+              "total": 3240,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3491",
+    "name": "Hotel Laghetto Viale",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av das Hortênsias, 829\r\nBairro Planalto",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.38639,
+        "lng": -50.8825
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3491/Property/1534707.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11416-P93322",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 2480.47,
+              "total": 2554.88,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 16
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Super Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11417-P93322",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 2921.59,
+              "total": 3009.24,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT6646",
+    "name": "Hotel Colina São Francisco",
+    "chain": {
+      "id": "8301",
+      "name": "Colina Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Rua Pedro Candiago, 993",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.388227,
+        "lng": -50.8844741
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/6646/Property/1465779.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Standard Triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R42085-P383761",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2541.86,
+              "total": 2541.86,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Luxo Triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R107441-P383761",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2983.51,
+              "total": 2983.51,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT5915",
+    "name": "Hotel Refúgio da Montanha",
+    "chain": {
+      "id": "3225",
+      "name": "Hotel Refugio da Montanha"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Leopoldo Rosenfeld, 150",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3886477,
+        "lng": -50.8826594
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/5915/Property/265166.jpg"
+    ],
+    "facilities": [
+      "PARK",
+      "WIFI"
+    ],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "Q5",
+        "name": "Gran Suite",
+        "amenities": [
+          "BEDS",
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R38216-P401135",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 5090.4,
+              "total": 5615.84,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "T3",
+        "name": "Suíte",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R37039-P401135",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 2545.2,
+              "total": 2816.12,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT7256",
+    "name": "Hotel Azaléia",
+    "chain": {
+      "id": "4079",
+      "name": "HOTEL AZALEIA"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av. Borges de Medeiros, 1069 - Centro",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3779409,
+        "lng": -50.8863736
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/7256/Property/297692.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "DB",
+        "occupancy": "Q4",
+        "name": "Casal + Cama extra Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R45911-P132376",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2600,
+              "total": 2616.4,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3484",
+    "name": "Hotel Laghetto Toscana",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Avenida das Hortênsias, 2600",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.36944,
+        "lng": -50.86167
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3484/Property/1534703.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11390-P93374",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 2684.41,
+              "total": 2764.94,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo Vale",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11391-P93374",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3156.4,
+              "total": 3251.09,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Super Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11392-P93374",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3716.89,
+              "total": 3828.4,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 10
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Super Luxo Vale",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11393-P93374",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4370.8,
+              "total": 4501.92,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT13015",
+    "name": "Laponia Hotel Gramado",
+    "chain": {
+      "id": "7536",
+      "name": "Laponia Hotel Gramado"
+    },
+    "stars": 3,
+    "address": {
+      "street": "R. Leopoldo Rosenfeld, 300 - Planalto, Gramado",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3890195,
+        "lng": -50.8811239
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/13015/Property/655715.jpeg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "QD",
+        "occupancy": "Q4",
+        "name": "Quarto Quádruplo Deluxe",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R77738-P296115",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2695,
+              "total": 2695,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      },
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Quarto Triplo Superior",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R77739-P296115",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2695,
+              "total": 2695,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8209",
+    "name": "Hotel Canto Verde - Gramado",
+    "chain": {
+      "id": "4513",
+      "name": "ND CATUZZO HOTELARIA LTDA"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av. das Hortênsias, 5660",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.361114511128047,
+        "lng": -50.847692190582194
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8209/Property/1240623.jpeg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "CB",
+        "occupancy": "Q4",
+        "name": "Chalé Canto Verde",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R50664-P475212",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 6024.88,
+              "total": 6643.77,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R50664-P161444",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 6031.88,
+              "total": 6651.47,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          },
+          {
+            "id": "R50664-P475212",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 8606.97,
+              "total": 9484.07,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": "CB",
+        "occupancy": "T3",
+        "name": "Chalé Serrano",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R51311-P475212",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2700.17,
+              "total": 2986.59,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R51311-P161444",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 2707.17,
+              "total": 2994.29,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R51311-P464435",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2707.17,
+              "total": 2994.29,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R51311-P475212",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3857.38,
+              "total": 4259.52,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-11T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT15431",
+    "name": "Hotel RF Vision (Restaurante Giratório)",
+    "chain": {
+      "id": "7803",
+      "name": "HSYSTEM"
+    },
+    "stars": 4,
+    "address": {
+      "street": "RUA ARTHUR REIMANN, 87 - Bairro JARDIM BELA VISTA",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3768863,
+        "lng": -50.8591274
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/15431/Property/860512.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "T3",
+        "name": "Suíte Deluxe",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R91599-P321988",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 2835,
+              "total": 2835,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3009",
+    "name": "Master Gramado",
+    "chain": {
+      "id": "1372",
+      "name": "Rede Master"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Carlos Lengler Filho, 103\r\nPlanalto",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3865272,
+        "lng": -50.8739601
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3009/Property/65985.jpg"
+    ],
+    "facilities": [
+      "SPA"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Superior Família",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R10559-P155687",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável ",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2841.75,
+              "total": 2858.15,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": "2025-07-01T00:00:00"
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R10559-P20877",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável ",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2999.6,
+              "total": 3016,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": "TW",
+        "occupancy": "T2",
+        "name": "Superior Triplo Twin (Três Camas de Solteiro)",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R107608-P155687",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável ",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2841.75,
+              "total": 2858.15,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": "2025-07-01T00:00:00"
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R107608-P20877",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável ",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2999.6,
+              "total": 3016,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT16624",
+    "name": "Pousada Monte Felice Recanto da Lua",
+    "chain": {
+      "id": "3316",
+      "name": "Rede Monte Felice "
+    },
+    "stars": 3,
+    "address": {
+      "street": "R Antonio Accorsi, 322 - Bairro: Bavária",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3851998,
+        "lng": -50.885297
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/16624/Property/1097204.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Luxo Triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R97634-P477194",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 2860.15,
+              "total": 3162.57,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R97634-P482623",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2860.15,
+              "total": 3162.57,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R97634-P459545",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2919.12,
+              "total": 3227.43,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R97634-P340505",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 2948.63,
+              "total": 3259.89,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R97634-P482623",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3918.02,
+              "total": 4326.22,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3483",
+    "name": "Hotel Laghetto Siena",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Avenida das Hortênsias, 3000",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.37528,
+        "lng": -50.86444
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3483/Property/1534697.png"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11516-P93280",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3014.17,
+              "total": 3104.6,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 23
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Super Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11517-P93280",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3544.13,
+              "total": 3650.45,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 23
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT10483",
+    "name": "Colina Lagos Hotel",
+    "chain": {
+      "id": "8301",
+      "name": "Colina Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "AV BORGES DE MEDEIROS   ",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3644062,
+        "lng": -50.8866992
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/10483/Property/665446.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Luxo Vista Triplo",
+        "amenities": [
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R103957-P411128",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 3054.24,
+              "total": 3054.24,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 8
+          },
+          {
+            "id": "R103957-P382762",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 3096.66,
+              "total": 3096.66,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT4948",
+    "name": "Bavária Sport Hotel by Intercity",
+    "chain": {
+      "id": "1345",
+      "name": "Intercity Hotels"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Rua da Bavária, 543\r\nBavária",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3843427,
+        "lng": -50.8850799
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/4948/Property/1219034.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo Pinhão",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R29615-P347969",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO SUSTENTÁVEL",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3145.5,
+              "total": 3476.45,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 7
+          },
+          {
+            "id": "R29615-P58913",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 25,
+              "total": 1165
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO SUSTENTÁVEL",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4660,
+              "total": 5142.4,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 1165,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-04T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Premium Nó de Pinho",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R107156-P347969",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO SUSTENTÁVEL",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 3550.5,
+              "total": 3921.95,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 11
+          },
+          {
+            "id": "R107156-P58913",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 25,
+              "total": 1315
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "TAXA DE TURISMO SUSTENTÁVEL",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "TAXA DE SERVIÇO",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 5260,
+              "total": 5802.4,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 1315,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-04T00:00:00",
+              "deadline": null
+            },
+            "allotment": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3480",
+    "name": "Hotel Laghetto Gramado",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Av Borges de Medeiros, 1700\r\nPlanalto",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.38667,
+        "lng": -50.87361
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3480/Property/1534699.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Super Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11328-P93361",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3297.74,
+              "total": 3396.67,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3830",
+    "name": "Hotel Recanto da Serra - Gramado",
+    "chain": {
+      "id": "2336",
+      "name": "Hotel Recanto da Serra"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Travessa Mestre Hiram, 114\r\nGramado",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3822088,
+        "lng": -50.8709612
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3830/Property/1219523.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R23350-P498699",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 6207.5,
+              "total": 6207.5,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R23350-P27796",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 7759.39,
+              "total": 7759.39,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      },
+      {
+        "type": "AP",
+        "occupancy": "T3",
+        "name": "Apartamento Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R26992-P498699",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 3516.7,
+              "total": 3516.7,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 14
+          },
+          {
+            "id": "R26992-P27796",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 4395.9,
+              "total": 4395.9,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 14
+          }
+        ]
+      },
+      {
+        "type": "AP",
+        "occupancy": "Q4",
+        "name": "Apartamento Luxo Superior",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R26994-P498699",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 3950.5,
+              "total": 3950.5,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          },
+          {
+            "id": "R26994-P27796",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 4938.12,
+              "total": 4938.12,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3497",
+    "name": "Hotel Laghetto Premio",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av Borges de Medeiros, 1533\r\nCentro, Gramado",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3884091,
+        "lng": -50.8749369
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3497/Property/1534701.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Super Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R11422-P93357",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3635.58,
+              "total": 3744.65,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT13135",
+    "name": "Hotel Laghetto Stilo Vita",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Rua Ernesto Volk, 207",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3758902,
+        "lng": -50.8809055
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/13135/Property/1150075.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Stilo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R78632-P278911",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 3737.25,
+              "total": 3849.37,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT6032",
+    "name": "Serrazul Hotel Distributed By Intercity",
+    "chain": {
+      "id": "10043",
+      "name": "Intercity Hotels Serrazul"
+    },
+    "stars": 4,
+    "address": {
+      "street": "R. Garibaldi, 152",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3796293,
+        "lng": -50.8720627
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/6032/Property/1543870.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "AP",
+        "occupancy": "T3",
+        "name": "Apartamento Vista",
+        "amenities": [
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R106952-P98466",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3937.5,
+              "total": 4331.25,
+              "markup": null,
+              "taxes": 10,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": "AP",
+        "occupancy": "T3",
+        "name": "Apartamento",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R106950-P98466",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3750,
+              "total": 4125,
+              "markup": null,
+              "taxes": 10,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT12344",
+    "name": "Exclusive Gramado Hotel & Spa by Gramado Parks",
+    "chain": {
+      "id": "7160",
+      "name": "GPH ADMINISTRADORA"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Avenida das Hortênsias, 4079",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3664336,
+        "lng": -50.8601596
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/12344/Property/925530.jpg"
+    ],
+    "facilities": [
+      "POL"
+    ],
+    "rooms": [
+      {
+        "type": "DB",
+        "occupancy": "Q4",
+        "name": "Classic Casal",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R73667-P246327",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3858.75,
+              "total": 4261.03,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": "TW",
+        "occupancy": "T2",
+        "name": "Classic Twin",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R75291-P246327",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 3858.75,
+              "total": 4261.03,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT12343",
+    "name": "Bella Gramado Resort & Spa by Gramado Parks",
+    "chain": {
+      "id": "7160",
+      "name": "GPH ADMINISTRADORA"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Av. das Hortênsias, 4665",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3610343,
+        "lng": -50.8569717
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/12343/Property/925160.jpg"
+    ],
+    "facilities": [
+      "POL"
+    ],
+    "rooms": [
+      {
+        "type": "TW",
+        "occupancy": "T2",
+        "name": "Classic Twin",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R77325-P246331",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4002,
+              "total": 4418.6,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "DB",
+        "occupancy": "Q4",
+        "name": "Classic Casal",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R77324-P246331",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4002,
+              "total": 4418.6,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT4946",
+    "name": "Hotel Cercano",
+    "chain": {
+      "id": "2774",
+      "name": "Capra Empreendimentos Imobiliarios Ltda"
+    },
+    "stars": 5,
+    "address": {
+      "street": "R. Me. Verônica, 220 - Centro, Gramado",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3777218,
+        "lng": -50.8713255
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/4946/Property/105640.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R29755-P98814",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4166.71,
+              "total": 4583.38,
+              "markup": null,
+              "taxes": 10,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 38
+          },
+          {
+            "id": "R29755-P518601",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4166.74,
+              "total": 4583.41,
+              "markup": null,
+              "taxes": 10,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 38
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3807",
+    "name": "Hotel Laghetto Stilo Centro",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Rua São Pedro, 374",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.37833,
+        "lng": -50.87556
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3807/Property/1388394.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Stilo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R65398-P93370",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4195.96,
+              "total": 4321.84,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT13592",
+    "name": "Laghetto Resort Golden",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 5,
+    "address": {
+      "street": "ROD RS 235, 31.000, KM 31",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3977982,
+        "lng": -50.9007009
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/13592/Property/944946.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Luxo Família Quíntuplo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R82255-P285860",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4757.79,
+              "total": 4900.52,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R82255-P291656",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 5197.72,
+              "total": 5353.65,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R82255-P291690",
+            "board": "FB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 5617.43,
+              "total": 5785.95,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Luxo Família",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R82254-P285860",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4234.82,
+              "total": 4361.86,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R82254-P291656",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4669.84,
+              "total": 4809.94,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          },
+          {
+            "id": "R82254-P291690",
+            "board": "FB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 5089.65,
+              "total": 5242.34,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      },
+      {
+        "type": "AC",
+        "occupancy": "Q4",
+        "name": "Luxo PcD",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R109615-P285860",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4234.82,
+              "total": 4361.86,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 9
+          },
+          {
+            "id": "R109615-P291656",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 4669.84,
+              "total": 4809.94,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 9
+          },
+          {
+            "id": "R109615-P291690",
+            "board": "FB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 5089.65,
+              "total": 5242.34,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT13864",
+    "name": "Buona Vitta Gramado Resort & Spa by Gramado Parks",
+    "chain": {
+      "id": "7160",
+      "name": "GPH ADMINISTRADORA"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Estrada Professora Elvira Apollo Benetti, 150.",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3663822,
+        "lng": -50.8580248
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/13864/Property/925446.jpg"
+    ],
+    "facilities": [
+      "POL"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "PNE",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R83296-P291202",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4260.75,
+              "total": 4703.23,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 11
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Classic",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R83298-P291202",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4260.75,
+              "total": 4703.23,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 28
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Classic Premium",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R83303-P291202",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 5325.96,
+              "total": 5874.96,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 12
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "F6",
+        "name": "Master",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R83304-P291202",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 6391.12,
+              "total": 7046.63,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT2986",
+    "name": "Hotel Fioreze Origem",
+    "chain": {
+      "id": "3062",
+      "name": "Hoteis Fioreze"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Avenida das Hortênsias, 1207",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.38222,
+        "lng": -50.87833
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/2986/Property/1290566.jpg"
+    ],
+    "facilities": [
+      "POL",
+      "PARK",
+      "WIFI"
+    ],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "F6",
+        "name": "Suíte Família",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R23207-P394688",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 8578.13,
+              "total": 9452.34,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte com Banheira de Hidromassagem",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R23206-P394688",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 9007.04,
+              "total": 9924.14,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Quadrúplo Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R23205-P394688",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 5524.32,
+              "total": 6093.15,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      },
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Quarto triplo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R115303-P394688",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4289.07,
+              "total": 4734.38,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8594",
+    "name": "Hotel Monte Felice Centro",
+    "chain": {
+      "id": "3316",
+      "name": "Rede Monte Felice "
+    },
+    "stars": 3,
+    "address": {
+      "street": "Av. das Hortênsias, 2152",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.386043,
+        "lng": -50.8757202
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8594/Property/1122514.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte Especial",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R53907-P477181",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 5828.67,
+              "total": 6427.94,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R53907-P482618",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 5828.67,
+              "total": 6427.94,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R53907-P459544",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 5948.85,
+              "total": 6560.13,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R53907-P160695",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 6008.9,
+              "total": 6626.19,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R53907-P482618",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 7984.44,
+              "total": 8799.28,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "T3",
+        "name": "Suite Master",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R53908-P477181",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4441.92,
+              "total": 4902.51,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53908-P482618",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4441.92,
+              "total": 4902.51,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53908-P459544",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4533.49,
+              "total": 5003.24,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53908-P160695",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 4579.3,
+              "total": 5053.63,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          },
+          {
+            "id": "R53908-P482618",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 6084.82,
+              "total": 6709.7,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT2405",
+    "name": "Hotel Alpestre",
+    "chain": {
+      "id": "1493",
+      "name": "Hotel Alpestre"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Leopoldo Rosenfeld, 67\r\nPlanalto",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.38778,
+        "lng": -50.88333
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/2405/Property/1110659.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "LUXO SUPERIOR",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R7637-P338476",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 4691.17,
+              "total": 4691.17,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          },
+          {
+            "id": "R7637-P291306",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 5392.42,
+              "total": 5392.42,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "SUPER LUXO ESPECIAL",
+        "amenities": [
+          "BEDS",
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R27597-P338476",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 6756.96,
+              "total": 6756.96,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          },
+          {
+            "id": "R27597-P291306",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 7458.21,
+              "total": 7458.21,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 7
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "SUPER LUXO",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R27596-P338476",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 4469.84,
+              "total": 4469.84,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 15
+          },
+          {
+            "id": "R27596-P291306",
+            "board": "HB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 5171.09,
+              "total": 5171.09,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 15
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "QUARTO DO ALCEU E DA LOLA",
+        "amenities": [
+          "SAFE",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R83962-P338476",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 9732.73,
+              "total": 9732.73,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-06-05T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT7544",
+    "name": "Hotel Fioreze Centro",
+    "chain": {
+      "id": "3062",
+      "name": "Hoteis Fioreze"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Sao Pedro\r\n438",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3777838,
+        "lng": -50.8766243
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/7544/Property/886781.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "F6",
+        "name": "Suíte com Banheira de Hidromassagem",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R75113-P362458",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 9196.87,
+              "total": 10132.96,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "QD",
+        "occupancy": "Q4",
+        "name": "Quarto Quádruplo Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R47547-P362458",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 6354.21,
+              "total": 7006.03,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      },
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Quarto Triplo Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R47541-P362458",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 4615.18,
+              "total": 5093.1,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT5136",
+    "name": "Petit Casa da Montanha",
+    "chain": {
+      "id": "2347",
+      "name": "Hoteis Casa da Montanha"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua Garibaldi, 254\r\nCentro",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3788223,
+        "lng": -50.8717167
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/5136/Property/233491.jpg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "TR",
+        "occupancy": "T3",
+        "name": "Apto Triplo Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R31348-P61100",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de serviço ",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 5245.5,
+              "total": 5770.05,
+              "markup": null,
+              "taxes": 10,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT7539",
+    "name": "Hotel Fioreze Primo",
+    "chain": {
+      "id": "3062",
+      "name": "Hoteis Fioreze"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Av. Borges de Medeiros, 3650 ",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.370942,
+        "lng": -50.8790225
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/7539/Property/733892.jpeg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "DB",
+        "occupancy": "T3",
+        "name": "Quarto Casal Luxo",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R52703-P244144",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 5424.74,
+              "total": 5983.61,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 19
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "F6",
+        "name": "Suíte Família Fioreze",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R52708-P244144",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              },
+              {
+                "included": true,
+                "description": "Taxa de Serviço",
+                "total": 10
+              }
+            ],
+            "price": {
+              "net": 9945.36,
+              "total": 10956.3,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT15352",
+    "name": "Hotel Chateau Laghetto Collection",
+    "chain": {
+      "id": "2143",
+      "name": "Laghetto Hoteis"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Rua Claudio Pedro Candiago, nº 15",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.3767039,
+        "lng": -50.8611099
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/15352/Property/913181.jpeg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte",
+        "amenities": [
+          "BEDS",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R91804-P332162",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 6292.32,
+              "total": 6481.09,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte Deck",
+        "amenities": [
+          "BEDS",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R91803-P332162",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 9829.3,
+              "total": 10124.18,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte Vista Vale",
+        "amenities": [
+          "BEDS",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R91805-P332162",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 7863.45,
+              "total": 8099.35,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      },
+      {
+        "type": "SU",
+        "occupancy": "Q4",
+        "name": "Suíte PcD",
+        "amenities": [
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R102719-P332162",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "ISS 3%",
+                "total": 3
+              }
+            ],
+            "price": {
+              "net": 6292.32,
+              "total": 6481.09,
+              "markup": null,
+              "taxes": 3,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2025-07-01T00:00:00",
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT8540",
+    "name": "Hotel Fioreze Chalés",
+    "chain": {
+      "id": "3062",
+      "name": "Hoteis Fioreze"
+    },
+    "stars": 4,
+    "address": {
+      "street": "Rua João Scur 1890\r\nLinha Ávila Alta",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.389536,
+        "lng": -50.8957469
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/8540/Property/437259.jpg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": "CB",
+        "occupancy": "Q5",
+        "name": "Chalé Fioreze",
+        "amenities": [
+          "SHWR",
+          "WIFI"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R80819-P237481",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 7230.72,
+              "total": 7247.12,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "from": null
+            },
+            "allotment": 4
+          },
+          {
+            "id": "R80819-P207235",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 8115.11,
+              "total": 8131.51,
+              "markup": null,
+              "taxes": 3.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT5517",
+    "name": "Estalagem St.Hubertus",
+    "chain": {
+      "id": "3019",
+      "name": "Estalagem St Hubertus"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Rua Carrieri, 974",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.399075884343368,
+        "lng": -50.87138238872798
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/5517/Property/1131767.jpeg"
+    ],
+    "facilities": [
+      "PARK"
+    ],
+    "rooms": [
+      {
+        "type": null,
+        "occupancy": "Q4",
+        "name": "Cardeal",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R34220-P337268",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 10487.02,
+              "total": 10487.02,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 1
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Luxo",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R34215-P337268",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 8422.54,
+              "total": 8422.54,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 10
+          }
+        ]
+      },
+      {
+        "type": null,
+        "occupancy": "T3",
+        "name": "Temático",
+        "amenities": [
+          "SAFE"
+        ],
+        "images": [],
+        "rates": [
+          {
+            "id": "R125088-P337268",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [],
+            "price": {
+              "net": 9838.8,
+              "total": 9838.8,
+              "markup": null,
+              "taxes": 0,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "credit-card",
+            "cancellation": {
+              "amount": 0,
+              "from": null,
+              "deadline": null
+            },
+            "allotment": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HT3851",
+    "name": "Hotel Casa da Montanha",
+    "chain": {
+      "id": "2347",
+      "name": "Hoteis Casa da Montanha"
+    },
+    "stars": 5,
+    "address": {
+      "street": "Avenida Borges de Medeiros, 3166\r\nCentro",
+      "city": null,
+      "country": "Brasil",
+      "zipcode": null,
+      "coordinates": {
+        "lat": -29.37528,
+        "lng": -50.87583
+      }
+    },
+    "connector": "omnibees",
+    "images": [
+      "https://media.omnibees.com/Images/3851/Property/1023710.jpeg"
+    ],
+    "facilities": [],
+    "rooms": [
+      {
+        "type": "AP",
+        "occupancy": "T3",
+        "name": "APARTAMENTO LUXO",
+        "amenities": [],
+        "images": [],
+        "rates": [
+          {
+            "id": "R23454-P69425",
+            "board": "BB",
+            "commissioned": {
+              "included": true,
+              "type": "percent",
+              "value": 0,
+              "total": 0
+            },
+            "taxes": [
+              {
+                "included": true,
+                "description": "Taxa de Serviço ",
+                "total": 10
+              },
+              {
+                "included": true,
+                "description": "Taxa de Turismo Sustentável ",
+                "total": 3.28
+              }
+            ],
+            "price": {
+              "net": 10595.25,
+              "total": 11671.17,
+              "markup": null,
+              "taxes": 13.28,
+              "commission": 0,
+              "currency": "BRL"
+            },
+            "payment": "voucher",
+            "cancellation": {
+              "amount": 0,
+              "from": "2024-03-18T00:00:00",
+              "deadline": null
+            },
+            "allotment": 5
+          }
+        ]
+      }
+    ]
+  }
+]
