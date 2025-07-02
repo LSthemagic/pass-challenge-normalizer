@@ -8,6 +8,9 @@ export async function getProviderAdapter(providerName) {
     const configPath = `../../integrations/${providerName}/${providerName}.config.js`;
     const mapperPath = `../../integrations/${providerName}/${providerName}.mapper.js`;
 
+    console.log("Path ",configPath)
+    console.log("Path ",mapperPath)
+
     const [configModule, mapperModule] = await Promise.all([
       import(configPath),
       import(mapperPath)
@@ -19,10 +22,15 @@ export async function getProviderAdapter(providerName) {
     const configKey = `${providerName}Config`; // ex: 'omnibeesConfig'
     const mapperKey = `${providerName}Mapper`; // ex: 'omnibeesMapper'
 
+    console.log(configKey)
+    console.log(mapperKey)
+    console.log(configModule)
     // Extrai o objeto de configuração de dentro do módulo
     const config = configModule[configKey];
     // Extrai o objeto mapper de dentro do módulo
     const mapper = mapperModule[mapperKey];
+
+    console.log("config: ", config)
 
     // Validação para garantir que os objetos foram encontrados
     if (!config || !mapper) {
