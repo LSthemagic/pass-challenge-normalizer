@@ -4,7 +4,7 @@ export const normalizeSchema = {
   // O 'body' descreve o formato esperado para o corpo da requisição (payload)
   body: {
     type: 'object',
-    required: ['provider', 'rawData'], // Define que ambos os campos são obrigatórios
+    required: ['provider',], // Define que ambos os campos são obrigatórios
     properties: {
       provider: { type: 'string' }, // O provedor deve ser uma string
       rawData: {}, // 'rawData' pode ser qualquer tipo de objeto ou array.

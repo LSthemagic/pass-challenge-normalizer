@@ -31,6 +31,7 @@ export async function getProviderAdapter(providerName) {
     const mapper = mapperModule[mapperKey];
 
     console.log("config: ", config)
+    console.log("mapper: ", mapper)
 
     // Validação para garantir que os objetos foram encontrados
     if (!config || !mapper) {
