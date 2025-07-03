@@ -4,10 +4,10 @@ import * as mappingService from '../../services/mapping.service.js';
 import { hotelbedsPaymentTypeDictionary } from "../hotelbeds/dictionaries/payment-types.dictionaries.js";
 
 function mapAndGroupHotelbeds(hotelsRawData) {
-  // return {
-  console.log(hotelsRawData)
     return hotelsRawData?.map((hotelData) => {
+      // Lógica original para mapear quartos, mantida intacta.
       const rooms = hotelData.rooms.map((roomData) => {
+        // A alteração será feita apenas dentro desta seção de mapeamento das tarifas.
         const rates = roomData.rates.map((rateData) => {
           const mainCancellationPolicy = get(
             rateData,
@@ -18,57 +18,50 @@ function mapAndGroupHotelbeds(hotelsRawData) {
             rateData.paymentType
           );
 
-          // Mapeamento do objeto pricing
+          // --- Início da Seção Modificada ---
+
           const netAmount = parseFloat(rateData.net || 0);
-          const totalAmount = netAmount; // No Hotelbeds, 'net' parece ser o total se não houver taxas/markups explícitos
 
-          const pricing = {
-            markup: {
-              included: false,
-              current: null,
-              applied: null,
-              total: null,
-            },
-            commission: {
-              included: false,
-              current: null,
-              applied: null,
-              total: null,
-            },
-            commissioned: {
-              included: false,
-              type: "percent",
-              value: 0,
-              total: 0,
-            },
-            resume: {
-              net: netAmount,
-              markup: null,
-              commission: 0,
-              commissioned: null,
-              fee: 0, // Hotelbeds não fornece taxas detalhadas no exemplo
-              total: totalAmount,
-            },
+          // 1. O objeto 'pricing' foi substituído pelo novo objeto 'price'.
+          const price = {
+            net: netAmount,
+            total: netAmount, // Em Hotelbeds, 'net' é o valor total sem taxas/markups explícitos
+            markup: null,     // Informação não disponível no response
+            taxes: 0,         // Informação não disponível no response
+            commission: 0,    // Informação não disponível no response
+            currency: hotelData.currency, // Moeda vinda do nível do hotel
           };
 
-          // Mapeamento do array fees
-          const fees = []; // Hotelbeds não fornece taxas detalhadas no exemplo
+          // 2. O array 'fees' foi removido e o array 'taxes' foi adicionado (vazio, pois não há dados).
+          const taxes = [];
 
+          // 3. Adicionado o objeto 'commissioned' com valores padrão.
+          const commissioned = {
+            included: false,
+            type: "percent",
+            value: 0,
+            total: 0,
+          };
+
+          // 4. O objeto de retorno da tarifa foi ajustado para o novo esquema.
           return {
-            id: rateData.rateKey,
-            board: rateData.boardCode,
-            pricing: pricing,
+            id: rateData.rateKey, //
+            board: rateData.boardCode, //
+            commissioned: commissioned,
+            taxes: taxes,
+            price: price,
             payment: paymentCode || null,
-            fees: fees,
             cancellation: {
-              amount: parseFloat(mainCancellationPolicy.amount || 0),
-              from: mainCancellationPolicy.from || null,
-              deadline: null,
+              amount: parseFloat(mainCancellationPolicy.amount || 0), //
+              from: mainCancellationPolicy.from || null, //
+              deadline: null, // Informação não disponível no response
             },
-            allotment: rateData.allotment,
+            allotment: rateData.allotment, //
           };
+          // --- Fim da Seção Modificada ---
         });
 
+        // Lógica original para mapear os detalhes do quarto, mantida intacta.
         return {
           type: parserService.extractRoomTypeCode(roomData.name),
           occupancy: parserService.extractOccupancyCode(
@@ -82,6 +75,7 @@ function mapAndGroupHotelbeds(hotelsRawData) {
         };
       });
 
+      // Lógica original para mapear os detalhes do hotel, mantida intacta.
       return {
         id: `HTB-${hotelData.code}`,
         name: hotelData.name,
@@ -101,12 +95,6 @@ function mapAndGroupHotelbeds(hotelsRawData) {
         rooms: rooms.filter((room) => room.rates.length > 0),
       };
     });
-  // };
-  // const filterData = mappingService.generateFilterObject(normalizedHotels);
-  // return {
-  //   hotel: normalizedHotels,
-  //   filter: filterData,
-  // }
 }
 
 export const hotelbedsMapper = { hotel: mapAndGroupHotelbeds };

@@ -18,10 +18,11 @@ function getHotelTextForAnalysis(hotelData) {
     return Array.from(uniqueTexts).join(' . ');
 }
 
+// Função principal de mapeamento
 function mapAndGroupOmnibees(hotelsRawData) {
-    // return {
-    // console.log(hotelsRawData)
+    // A função já retorna um array de hotéis, que é o correto.
     return hotelsRawData.map(hotelData => {
+        // Lógica de extração de facilities e preparação de mapas (sem alterações)
         const hotelText = getHotelTextForAnalysis(hotelData);
         const allFacilities = parserService.extractFacilities(hotelText);
         const facilities = allFacilities.filter(code => parserService.PRIORITY_FACILITIES.includes(code));
@@ -30,6 +31,7 @@ function mapAndGroupOmnibees(hotelsRawData) {
         const ratePlansMap = new Map((get(hotelData, 'RatePlans') || []).map(rp => [rp.RatePlanID, rp]));
         const roomsMap = new Map();
 
+        // Lógica de mapeamento inicial de quartos (sem alterações)
         for (const roomType of roomTypesMap.values()) {
             const roomName = get(roomType, 'RoomName', 'N/A');
             const description = get(roomType, 'RoomDescription.Description');
@@ -41,11 +43,12 @@ function mapAndGroupOmnibees(hotelsRawData) {
                 occupancy: parserService.extractOccupancyCode(roomName, get(roomType, 'MaxOccupancy')),
                 name: roomName,
                 amenities: amenityCodes,
-                images: [], // Fonte para imagens de quarto na Omnibees precisa ser confirmada
+                images: [],
                 rates: [],
             });
         }
 
+        // Itera sobre as tarifas para preencher os quartos
         (get(hotelData, 'RoomRates') || []).forEach(roomRate => {
             const roomCode = String(roomRate.RoomID);
             const room = roomsMap.get(roomCode);
@@ -56,61 +59,50 @@ function mapAndGroupOmnibees(hotelsRawData) {
             
             // --- INÍCIO DA LÓGICA DE MAPEAMENTO DE RATES ATUALIZADA ---
 
-            const totalAmount = get(roomRate, 'Total.AmountAfterTax', 0);
+            // Variáveis auxiliares para facilitar a leitura e o acesso aos dados
             const netAmount = get(roomRate, 'Total.AmountBeforeTax', 0);
-            const taxesAmount = get(ratePlan, 'TaxPolicies', [])?.reduce((sum, tax) => sum + parseFloat(tax.Value || 0), 0);
-            
+            const totalAmount = get(roomRate, 'Total.AmountAfterTax', 0);
+            const commissionPercent = get(ratePlan, 'Commission.Percent', 0);
+            const commissionTotal = (netAmount * commissionPercent) / 100;
             const markupPercent = get(ratePlan, 'TPA_Extensions.Markup.Percent', 0);
             const markupTotal = (netAmount * markupPercent) / 100;
+            const taxesTotal = get(roomRate, 'Total.Taxes', [])?.reduce((sum, tax) => sum + parseFloat(tax.Amount || 0), 0);
 
-            const pricing = {
-                markup: {
-                    included: get(roomRate, 'Total.AmountIncludingMarkup', false),
-                    current: markupPercent,
-                    applied: markupPercent,
-                    total: markupTotal,
-                },
-                commission: {
-                    included: false,
-                    current: null,
-                    applied: null,
-                    total: null,
-                },
-                commissioned: {
-                    included: get(ratePlan, 'Commission.Commissionable', false),
-                    type: 'percent',
-                    value: get(ratePlan, 'Commission.Percent', 0),
-                    total: (netAmount * get(ratePlan, 'Commission.Percent', 0)) / 100,
-                },
-                resume: {
-                    net: netAmount,
-                    markup: markupTotal,
-                    commission: (netAmount * get(ratePlan, 'Commission.Percent', 0)) / 100,
-                    commissioned: (netAmount * get(ratePlan, 'Commission.Percent', 0)) / 100, // Pode ser o mesmo valor acima, dependendo da regra
-                    fee: taxesAmount,
-                    total: totalAmount,
-                }
+            // 1. Mapeia o novo objeto 'price'
+            const price = {
+                net: netAmount,
+                total: totalAmount,
+                markup: markupTotal,
+                taxes: taxesTotal,
+                commission: commissionTotal,
+                currency: omnibeesDict.omnibeesCurrencyDictionary.get(get(roomRate, 'Total.CurrencyCode')),
             };
 
-            // 2. Mapeia o novo array 'fees'
-            const fees = (get(ratePlan, 'TaxPolicies') || []).map(tax => ({
+            // 2. Mapeia o novo objeto 'commissioned'
+            const commissioned = {
+                included: get(ratePlan, 'Commission.Commissionable', false),
+                type: 'percent',
+                value: commissionPercent,
+                total: commissionTotal,
+            };
+
+            // 3. Mapeia o novo array 'taxes' (anteriormente 'fees')
+            const taxes = (get(ratePlan, 'TaxPolicies') || []).map(tax => ({
                 included: true, // Omnibees geralmente inclui no total
-                currency: omnibeesDict.omnibeesCurrencyDictionary.get(get(roomRate, 'Total.CurrencyCode')),
-                name: tax.Name,
-                type: 'percent', // Assumindo percentual
-                value: parseFloat(tax.Value || 0),
-                total: (netAmount * parseFloat(tax.Value || 0)) / 100, // Cálculo do total da taxa
+                description: tax.Name,
+                total: get(tax, 'IsValuePercentage', false) ? (netAmount * parseFloat(tax.Value || 0)) / 100 : parseFloat(tax.Value || 0),
             }));
 
-            // 3. Constrói o objeto de rate final com a nova estrutura
+            // 4. Constrói o objeto de rate final com a nova estrutura simplificada
             const newRate = {
                 id: `R${roomRate.RoomID}-P${ratePlan.RatePlanID}`,
                 board: omnibeesDict.omnibeesBoardDictionary.get(get(ratePlan, 'MealsIncluded.MealPlanCode')),
-                pricing: pricing,
+                commissioned: commissioned,
+                taxes: taxes,
+                price: price,
                 payment: parserService.getPriorityPaymentMethod(new Set(
                     (get(ratePlan, 'PaymentPolicies.AcceptedPayments') || []).map(p => omnibeesDict.omnibeesPaymentMethodDictionary.get(p.GuaranteeTypeCode)).filter(Boolean)
                 )),
-                fees: fees,
                 cancellation: {
                     amount: get(cancellationPolicy, 'AmountPercent.Amount'),
                     from: get(cancellationPolicy, 'Start'),
@@ -124,6 +116,7 @@ function mapAndGroupOmnibees(hotelsRawData) {
             // --- FIM DA LÓGICA DE MAPEAMENTO DE RATES ATUALIZADA ---
         });
 
+        // Lógica final de construção do objeto do hotel (sem alterações)
         const basicInfo = hotelData.BasicPropertyInfo;
         const standardCountryCode = omnibeesDict.omnibeesCountryDictionary.get(get(basicInfo, 'Address.CountryCode'));
 
@@ -144,19 +137,10 @@ function mapAndGroupOmnibees(hotelsRawData) {
             facilities: facilities,
             rooms: Array.from(roomsMap.values()).filter(room => room.rates.length > 0),
         };
-    })
-    // };
-
-    // const filterData = mappingService.generateFilterObject(normalizedHotels);
-
-    // return{
-    //     hotel: normalizedHotels,
-    //     filter: filterData
-    // }
-
+    });
 }
 
+// A exportação permanece a mesma para compatibilidade com o orquestrador
 export const omnibeesMapper = {
     hotel: mapAndGroupOmnibees
 };
-
