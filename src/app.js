@@ -4,6 +4,7 @@ import helmet from '@fastify/helmet';
 import cors from '@fastify/cors';
 
 import normalizeRouter from './api/normalize/normalize.route.js'; 
+import searchRoutes from './api/search/search.routes.js';
 // Cria a instância do Fastify
 // A opção 'bodyLimit' substitui o express.json({ limit: '100mb' })
 const app = fastify({
@@ -36,7 +37,7 @@ app.get('/', async (request, reply) => {
 // Registra seu router principal com um prefixo
 // Todas as rotas dentro de 'normalizeRouter' começarão com /api
 app.register(normalizeRouter, { prefix: '/api' });
-
+app.register(searchRoutes, { prefix: '/api' });
 
 // Exporta a instância do app para ser usada pelo server.js
 export default app;

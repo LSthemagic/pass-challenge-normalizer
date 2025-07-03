@@ -1,0 +1,430 @@
+            {
+                "RPH": 2,
+                "RoomTypes": [
+                    {
+                        "RoomID": 72738,
+                        "RoomName": "Chalé Triplo",
+                        "RoomDescription": {
+                            "Language": 8,
+                            "Description": "Chalé Triplo"
+                        },
+                        "AmenitiesType": null,
+                        "Occupancies": [
+                            {
+                                "MinOccupancy": 1,
+                                "MaxOccupancy": 3,
+                                "AgeQualifyingCode": 10,
+                                "MinAge": null,
+                                "MaxAge": null
+                            },
+                            {
+                                "MinOccupancy": 1,
+                                "MaxOccupancy": 1,
+                                "AgeQualifyingCode": 8,
+                                "MinAge": null,
+                                "MaxAge": null
+                            }
+                        ],
+                        "NumberOfUnits": 3,
+                        "MaxOccupancy": 3
+                    }
+                ],
+                "RatePlans": [
+                    {
+                        "EffectiveDate": null,
+                        "ExpireDate": null,
+                        "RatePlanName": "Melhor Tarifa Disponível",
+                        "Guarantees": [
+                            {
+                                "Start": null,
+                                "Duration": null,
+                                "End": null,
+                                "GuaranteeDescription": {
+                                    "Name": "Política de Garantia",
+                                    "Language": 8,
+                                    "Description": "*Agências de Turismo e Operadoras faturamento para 20 dias após o Check-out"
+                                },
+                                "GuaranteesAcceptedType": {
+                                    "GuaranteesAccepted": [
+                                        {
+                                            "RPH": 0,
+                                            "GuaranteeTypeCode": 8,
+                                            "PaymentCard": null,
+                                            "GuaranteeID": null
+                                        }
+                                    ]
+                                },
+                                "DeadLine": null,
+                                "AmountPercent": null,
+                                "GuaranteeCode": 21177
+                            }
+                        ],
+                        "CancelPenalties": [
+                            {
+                                "NonRefundable": true,
+                                "Start": null,
+                                "Duration": null,
+                                "End": null,
+                                "DeadLine": null,
+                                "AmountPercent": null,
+                                "PenaltyDescription": {
+                                    "Name": "Non Refundable",
+                                    "Language": 8,
+                                    "Description": "Non Refundable - 100% penalização, não cancelável"
+                                },
+                                "AmountRules": null
+                            }
+                        ],
+                        "RatePlanInclusions": [
+                            {
+                                "RatePlanInclusionDesciption": {
+                                    "Name": "WiFi",
+                                    "Language": 8,
+                                    "Description": "WiFi"
+                                },
+                                "Start": null,
+                                "Duration": null,
+                                "End": null,
+                                "ID": 46306
+                            },
+                            {
+                                "RatePlanInclusionDesciption": {
+                                    "Name": "Estacionamento",
+                                    "Language": 8,
+                                    "Description": "Estacionamento"
+                                },
+                                "Start": null,
+                                "Duration": null,
+                                "End": null,
+                                "ID": 46307
+                            }
+                        ],
+                        "MealsIncluded": {
+                            "Breakfast": true,
+                            "Lunch": false,
+                            "Dinner": false,
+                            "MealPlanIndicator": true,
+                            "MealPlanCode": 3,
+                            "ID": 46305,
+                            "Name": "Café da Manhã",
+                            "Description": "Café da Manhã Buffet",
+                            "Price": {
+                                "Start": null,
+                                "Duration": null,
+                                "End": null,
+                                "AmountBeforeTax": 0.00,
+                                "AmountAfterTax": 0.00,
+                                "CurrencyCode": 16
+                            },
+                            "ServicePricingType": 21
+                        },
+                        "RatePlanID": 392259,
+                        "TaxPolicies": [
+                            {
+                                "Name": "Taxa de Turismo",
+                                "Description": "Taxa Municipal - Pagamento Obrigatório",
+                                "IsPerNight": true,
+                                "IsPerStay": false,
+                                "IsPerPerson": false,
+                                "IsPerRoom": true,
+                                "Value": 3.28,
+                                "IsValuePercentage": false,
+                                "CurrencyCode": 16,
+                                "ID": 7584
+                            }
+                        ],
+                        "RatePlanDescription": {
+                            "Language": 8,
+                            "Description": ""
+                        },
+                        "AdditionalDetailsType": {
+                            "AdditionalDetails": [
+                                {
+                                    "DetailDescription": {
+                                        "Name": "Política Geral",
+                                        "Language": 8,
+                                        "Description": "-Saídas antecipada será cobrado 100% das diárias.\n\n- O horário de check-in é a partir da 14:00 e o check-out deve ser feito até 12:00; \nEarly check-in ou late check-out poderão gerar cobrança adicional;\n\n - Uma criança até dois anos não é cobrada, desde que durma em uma das camas pré-existentes no apartamento. Crianças acima de 2 anos terá valor adicional. No caso de duas crianças menores de 2 anos, uma delas será cortesia e uma cobrada conforme valor adicional;\n \n- São permitidos animais de estimação de pequeno porte mediante pedido e custo adicional.\n\n- Funcionamos das 07:00 às 00:00 da manhã. Favor agendar com o Hotel saídas ou entradas após esses horários."
+                                    }
+                                }
+                            ]
+                        },
+                        "Offers": null,
+                        "PaymentPolicies": {
+                            "AcceptedPayments": [
+                                {
+                                    "RPH": 3,
+                                    "GuaranteeTypeCode": 3,
+                                    "PaymentCard": null,
+                                    "GuaranteeID": null
+                                }
+                            ]
+                        },
+                        "Commission": null,
+                        "CurrencyCode": 16,
+                        "RatePlanTypeCode": 13,
+                        "SortOrder": null,
+                        "PriceViewableInd": true,
+                        "TPA_Extensions": {
+                            "POS": {},
+                            "WLCode": 9,
+                            "ProviderName": "Omnibees",
+                            "ProviderCode": "OMNB",
+                            "Markup": {
+                                "Percent": 20.00
+                            },
+                            "Package": null
+                        }
+                    }
+                ],
+                "RoomRates": [
+                    {
+                        "RoomStayCandidateRPH": 0,
+                        "EffectiveDate": "2025-07-20T00:00:00",
+                        "ExpireDate": "2025-07-25T00:00:00",
+                        "RatePlanID": 392259,
+                        "RoomID": 72738,
+                        "RatesType": {
+                            "Rates": [
+                                {
+                                    "EffectiveDate": "2025-07-20T00:00:00",
+                                    "MinLOS": 2,
+                                    "MaxLOS": null,
+                                    "Total": {
+                                        "AmountBeforeTax": 360.00,
+                                        "AmountAfterTax": 0.0,
+                                        "CurrencyCode": 16,
+                                        "AmountIncludingMarkup": false,
+                                        "AmountIsPackage": false,
+                                        "ChargeType": 19,
+                                        "TPA_Extensions": null,
+                                        "Taxes": null
+                                    },
+                                    "AgeQualifyingCode": null,
+                                    "MinAge": null,
+                                    "MaxAge": null,
+                                    "MinGuestApplicable": null,
+                                    "MaxGuestApplicable": null,
+                                    "Status": null,
+                                    "NumberOfUnits": 5,
+                                    "MinAdvancedBookingOffset": null,
+                                    "StayThrough": null,
+                                    "Duration": null,
+                                    "FPLOS": null
+                                },
+                                {
+                                    "EffectiveDate": "2025-07-21T00:00:00",
+                                    "MinLOS": 2,
+                                    "MaxLOS": null,
+                                    "Total": {
+                                        "AmountBeforeTax": 360.00,
+                                        "AmountAfterTax": 0.0,
+                                        "CurrencyCode": 16,
+                                        "AmountIncludingMarkup": false,
+                                        "AmountIsPackage": false,
+                                        "ChargeType": 19,
+                                        "TPA_Extensions": null,
+                                        "Taxes": null
+                                    },
+                                    "AgeQualifyingCode": null,
+                                    "MinAge": null,
+                                    "MaxAge": null,
+                                    "MinGuestApplicable": null,
+                                    "MaxGuestApplicable": null,
+                                    "Status": null,
+                                    "NumberOfUnits": 5,
+                                    "MinAdvancedBookingOffset": null,
+                                    "StayThrough": null,
+                                    "Duration": null,
+                                    "FPLOS": null
+                                },
+                                {
+                                    "EffectiveDate": "2025-07-22T00:00:00",
+                                    "MinLOS": 2,
+                                    "MaxLOS": null,
+                                    "Total": {
+                                        "AmountBeforeTax": 360.00,
+                                        "AmountAfterTax": 0.0,
+                                        "CurrencyCode": 16,
+                                        "AmountIncludingMarkup": false,
+                                        "AmountIsPackage": false,
+                                        "ChargeType": 19,
+                                        "TPA_Extensions": null,
+                                        "Taxes": null
+                                    },
+                                    "AgeQualifyingCode": null,
+                                    "MinAge": null,
+                                    "MaxAge": null,
+                                    "MinGuestApplicable": null,
+                                    "MaxGuestApplicable": null,
+                                    "Status": null,
+                                    "NumberOfUnits": 4,
+                                    "MinAdvancedBookingOffset": null,
+                                    "StayThrough": null,
+                                    "Duration": null,
+                                    "FPLOS": null
+                                },
+                                {
+                                    "EffectiveDate": "2025-07-23T00:00:00",
+                                    "MinLOS": 2,
+                                    "MaxLOS": null,
+                                    "Total": {
+                                        "AmountBeforeTax": 360.00,
+                                        "AmountAfterTax": 0.0,
+                                        "CurrencyCode": 16,
+                                        "AmountIncludingMarkup": false,
+                                        "AmountIsPackage": false,
+                                        "ChargeType": 19,
+                                        "TPA_Extensions": null,
+                                        "Taxes": null
+                                    },
+                                    "AgeQualifyingCode": null,
+                                    "MinAge": null,
+                                    "MaxAge": null,
+                                    "MinGuestApplicable": null,
+                                    "MaxGuestApplicable": null,
+                                    "Status": null,
+                                    "NumberOfUnits": 4,
+                                    "MinAdvancedBookingOffset": null,
+                                    "StayThrough": null,
+                                    "Duration": null,
+                                    "FPLOS": null
+                                },
+                                {
+                                    "EffectiveDate": "2025-07-24T00:00:00",
+                                    "MinLOS": 3,
+                                    "MaxLOS": null,
+                                    "Total": {
+                                        "AmountBeforeTax": 360.00,
+                                        "AmountAfterTax": 0.0,
+                                        "CurrencyCode": 16,
+                                        "AmountIncludingMarkup": false,
+                                        "AmountIsPackage": false,
+                                        "ChargeType": 19,
+                                        "TPA_Extensions": null,
+                                        "Taxes": null
+                                    },
+                                    "AgeQualifyingCode": null,
+                                    "MinAge": null,
+                                    "MaxAge": null,
+                                    "MinGuestApplicable": null,
+                                    "MaxGuestApplicable": null,
+                                    "Status": null,
+                                    "NumberOfUnits": 3,
+                                    "MinAdvancedBookingOffset": null,
+                                    "StayThrough": null,
+                                    "Duration": null,
+                                    "FPLOS": null
+                                }
+                            ]
+                        },
+                        "Total": {
+                            "AmountBeforeTax": 1800.00,
+                            "AmountAfterTax": 1816.40,
+                            "CurrencyCode": 16,
+                            "AmountIncludingMarkup": false,
+                            "AmountIsPackage": false,
+                            "ChargeType": 18,
+                            "TPA_Extensions": null,
+                            "Taxes": [
+                                {
+                                    "Name": "Taxa de Turismo",
+                                    "Description": "Taxa Municipal - Pagamento Obrigatório",
+                                    "Amount": 16.40,
+                                    "CurrencyCode": 16,
+                                    "ID": 7584
+                                }
+                            ]
+                        },
+                        "AdvanceBookingRestriction": null,
+                        "ServiceRPHs": [],
+                        "Discount": null,
+                        "PromotionCode": null,
+                        "GroupCode": null,
+                        "TPA_Extensions": {
+                            "ApprovalInvoiced": null,
+                            "Services": null,
+                            "GuestsTotalRate": null,
+                            "Rates": null,
+                            "TotalDiscountValue": null,
+                            "IsPreferredHotel": null,
+                            "OccupationFor": {
+                                "Adults": 2,
+                                "Childs": 1
+                            }
+                        },
+                        "Availability": [
+                            {
+                                "AvailabilityStatus": "AvailableForSale",
+                                "WarningRPH": null
+                            }
+                        ],
+                        "CancelPenalty": null,
+                        "Guarantee": null
+                    }
+                ],
+                "Total": {
+                    "AmountBeforeTax": 1800.00,
+                    "AmountAfterTax": 1816.40,
+                    "CurrencyCode": 16,
+                    "AmountIncludingMarkup": false,
+                    "AmountIsPackage": false,
+                    "ChargeType": 12,
+                    "TPA_Extensions": null,
+                    "Taxes": null
+                },
+                "GuestCountsType": null,
+                "BasicPropertyInfo": {
+                    "CurrencyCode": 16,
+                    "Position": {
+                        "Latitude": "-26.5228167",
+                        "Longitude": "-50.9714227"
+                    },
+                    "Address": {
+                        "CountryCode": 40,
+                        "StateProvCode": 7316529,
+                        "CityCode": 4464157,
+                        "AddressLine": "R. Gustavo Velp, 188",
+                        "CityName": null,
+                        "PostalCode": null,
+                        "StateProv": null,
+                        "CountryName": null,
+                        "ZoneCode": 8010198,
+                        "ZoneName": null
+                    },
+                    "ContactNumbersType": null,
+                    "Award": {
+                        "Rating": 4,
+                        "Name": null
+                    },
+                    "HotelAmenities": null,
+                    "Policy": null,
+                    "HotelRef": {
+                        "HotelCode": 12205,
+                        "ChainCode": 7059,
+                        "HotelName": "Hotel Cabanas da Mata",
+                        "BrandName": null,
+                        "ChainName": "Hotel Cabanas da Mata"
+                    },
+                    "VendorMessagesType": null,
+                    "ImageURL": "https://media.omnibees.com/Images/12205/Property/1318032.jpeg"
+                },
+                "Reference": null,
+                "CommentsType": null,
+                "SpecialRequestsType": null,
+                "IndexNumber": null,
+                "RoomStayStatus": null,
+                "TPA_Extensions": {
+                    "ApprovalInvoiced": 1,
+                    "Services": null,
+                    "GuestsTotalRate": null,
+                    "Rates": null,
+                    "TotalDiscountValue": null,
+                    "IsPreferredHotel": false,
+                    "SupplierCode": "C124_16847"
+                },
+                "Guarantees": null,
+                "RoomStayCandidateRPH": null,
+                "AvailabilityStatus": null,
+                "WarningRPH": null,
+                "RoomStayLanguage": 8
+            }

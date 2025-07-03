@@ -16,11 +16,11 @@ export async function runNormalizationPipeline(rawData, providerName) {
   console.log('adapter:  ', adapter);
   // console.log(rawData)
   const hotelItems = get(rawData, hotelArrayPath, []);
-  console.log(hotelItems)
+  // console.log(hotelItems)
   console.log(`[Orquestrador] Mapeando ${hotelItems.length} hotéis brutos.`);
   // console.log(hotelItems)
   const finalHotels = await mapper.hotel(hotelItems);
   console.log(`[Orquestrador] Mapeamento assíncrono concluído. ${finalHotels.data?.length} hotéis normalizados.`);
-  console.log(finalHotels)
+  // console.log(finalHotels)
   return finalHotels;
 }
