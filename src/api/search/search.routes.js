@@ -1,4 +1,4 @@
-import { fetchOmnibeesData, fetchHotelbedsData } from '../../services/provider.service.js';
+import { fetchOmnibeesData, fetchHotelbedsData, fetchB2BData } from '../../services/provider.service.js';
 import { runNormalizationPipeline } from '../../core/strategies/orchestrator.js';
 import { generateFilterObject } from '../../services/filter.service.js'; // Vamos mover a função para um serviço
 
@@ -9,25 +9,25 @@ async function searchRoutes(fastify, options) {
   fastify.post('/search', async (request, reply) => {
     try {
       // 1. Busca os dados brutos de todos os provedores em paralelo
-      const [omnibeesRawData, hotelbedsRawData] = await Promise.all([
-        fetchOmnibeesData(),
-        fetchHotelbedsData()
+      const [omnibeesRawData, hotelbedsRawData, b2bRawData] = await Promise.all([
+        fetchOmnibeesData(request.body),
+        fetchHotelbedsData(request.body),
+        fetchB2BData(request.body)
       ]);
-
+      // console.log("b2b \n",b2bRawData)
       // 2. Normaliza os dados de cada provedor em paralelo
-      const [omnibeesHotels, hotelbedsHotels] = await Promise.all([
+      const [omnibeesHotels, hotelbedsHotels, b2bHotels] = await Promise.all([
         runNormalizationPipeline(omnibeesRawData, 'omnibees'),
-        runNormalizationPipeline(hotelbedsRawData, 'hotelbeds')
+        runNormalizationPipeline(hotelbedsRawData, 'hotelbeds'),
+        runNormalizationPipeline(b2bRawData, 'b2b')
       ]);
 
-      // 3. Combina os resultados de todos os provedores numa única lista
-      // O '.flat()' garante que o resultado seja um array simples de hotéis
-      const allNormalizedHotels = [omnibeesHotels, hotelbedsHotels].flat();
+
+      const allNormalizedHotels = [omnibeesHotels, hotelbedsHotels, b2bHotels].flat();
       
-      // 4. Gera o objeto de filtro a partir da lista consolidada
+
       const filterData = generateFilterObject(allNormalizedHotels);
 
-      // 5. Retorna a resposta final para o frontend
       return {
         hotel: allNormalizedHotels,
         filter: filterData
