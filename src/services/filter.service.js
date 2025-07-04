@@ -1,5 +1,5 @@
 export function generateFilterObject(normalizedHotels) {
-    // A estrutura inicial do filtro. A moeda agora é 'BRL' por defeito.
+    // A estrutura inicial do filtro, agora incluindo 'connector'.
     const filter = {
         currency: { code: "BRL", min: Infinity, max: -Infinity },
         payment: {},
@@ -10,6 +10,7 @@ export function generateFilterObject(normalizedHotels) {
         neighborhoods: {},
         category: {},
         facilities: {},
+        connector: {}, // Adicionado o filtro de conector
     };
 
     const allPrices = [];
@@ -21,7 +22,6 @@ export function generateFilterObject(normalizedHotels) {
     }
 
     for (const hotel of normalizedHotels) {
-        // Defensividade: só processa se o hotel for um objeto válido.
         if (!hotel || typeof hotel !== 'object') continue;
 
         // Contagem de estrelas
@@ -33,15 +33,20 @@ export function generateFilterObject(normalizedHotels) {
         if (hotel.chain && hotel.chain.name) {
             filter.chain[hotel.chain.name] = (filter.chain[hotel.chain.name] || 0) + 1;
         }
+        
+        // **NOVO: Contagem de conectores**
+        if (hotel.connector) {
+            filter.connector[hotel.connector] = (filter.connector[hotel.connector] || 0) + 1;
+        }
 
         // Contagem de bairros
         if (hotel.address && hotel.address.neighborhood) {
             filter.neighborhoods[hotel.address.neighborhood] = (filter.neighborhoods[hotel.address.neighborhood] || 0) + 1;
         }
 
-        // Contagem de categorias (lógica simplificada)
+        // Contagem de categorias
         const nameLower = (hotel.name || '').toLowerCase();
-        let category = 'hotel'; // Padrão
+        let category = 'hotel';
         if (nameLower.includes('pousada')) category = 'pousada';
         else if (nameLower.includes('hostel')) category = 'hostel';
         filter.category[category] = (filter.category[category] || 0) + 1;
@@ -58,9 +63,9 @@ export function generateFilterObject(normalizedHotels) {
             for (const room of hotel.rooms) {
                 if (room.rates && Array.isArray(room.rates)) {
                     for (const rate of room.rates) {
-                        // Preços para min/max
-                        if (rate.pricing && rate.pricing.resume && typeof rate.pricing.resume.total === 'number') {
-                            allPrices.push(rate.pricing.resume.total);
+                        // **CORREÇÃO: Ajustado para o novo objeto 'price'**
+                        if (rate.price && typeof rate.price.total === 'number') {
+                            allPrices.push(rate.price.total);
                         }
 
                         // Contagem de tipo de pagamento
@@ -92,17 +97,19 @@ export function generateFilterObject(normalizedHotels) {
         filter.currency.max = 0;
     }
     
-    // Remove chaves de filtro que não tiveram nenhuma contagem para uma resposta mais limpa
+    // Remove chaves de filtro que não tiveram nenhuma contagem
     Object.keys(filter).forEach(key => {
-        if (typeof filter[key] === 'object' && Object.keys(filter[key]).length === 0) {
-            delete filter[key];
+        if (typeof filter[key] === 'object' && !Array.isArray(filter[key]) && Object.keys(filter[key]).length === 0) {
+            // Garante que não apague o objeto de moeda se ele estiver zerado
+            if (key !== 'currency') {
+                delete filter[key];
+            }
         }
     });
 
     if (filter.cancellation && filter.cancellation.free === 0) {
         delete filter.cancellation;
     }
-
 
     return filter;
 }
