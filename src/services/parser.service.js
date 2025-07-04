@@ -1,5 +1,4 @@
-import * as masterData from '../core/master-data/index.js'; // Importa todos os dados mestres
-
+import * as masterData from '../core/master-data/index.js';
 export const PRIORITY_FACILITIES = ["POL", "SPA", "WIFI", "PARK"];
 export const PRIORITY_AMENITIES = ["BEDS", "SHWR", "SAFE", "TV", "WIFI"];
 
@@ -28,7 +27,6 @@ export function extractFacilities(hotelText) {
 }
 
 
-// A lista de regras original permanece a mesma
 const priorityList = [
     // Suítes mais luxuosas primeiro
     { code: 'PS', keywords: ['presidential', 'presidencial'] },
@@ -58,30 +56,16 @@ const priorityList = [
     { code: 'CR', keywords: ['connecting', 'conjugado'] },
 ];
 
-// --- INÍCIO DA PRÉ-COMPILAÇÃO (Executa apenas uma vez) ---
 
-// 1. Criamos um array apenas com os códigos, na mesma ordem de prioridade.
 const prioritizedCodes = priorityList.map(rule => rule.code);
 
-// 2. Criamos a string da regex. Cada grupo de keywords é envolvido por `()`
-//    para criar um grupo de captura. A ordem dos grupos mantém a prioridade.
+
 const regexPattern = priorityList
     .map(rule => `(${rule.keywords.join('|')})`)
     .join('|');
 
-// 3. Compilamos a regex final.
-// O `\b` (word boundary) garante que só encontremos palavras inteiras.
-// A flag 'i' torna a busca insensível a maiúsculas/minúsculas.
 const ROOM_TYPE_REGEX = new RegExp(`\\b(${regexPattern})\\b`, 'i');
 
-// --- FIM DA PRÉ-COMPILAÇÃO ---
-
-
-/**
- * Extrai o código do tipo de quarto de uma string de nome de forma altamente otimizada.
- * @param {string} roomName - O nome do quarto a ser analisado.
- * @returns {string | null} O código do tipo de quarto ou null se não for encontrado.
- */
 export function extractRoomTypeCode(roomName) {
     if (!roomName) return null;
 
