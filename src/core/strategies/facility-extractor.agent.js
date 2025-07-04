@@ -1,4 +1,3 @@
-// strategies/facility-extractor.agent.js
 import { openai } from "../utils/openai-client.js";
 import { MASTER_FACILITIES_LIST_FOR_AI } from '../providers/master-data/facilities.data.js';
 import { facilitiesMap } from '../providers/master-data/facilities.data.js';

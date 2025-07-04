@@ -1,4 +1,3 @@
-// strategies/occupancy-extractor.agent.js
 import { openai } from "../utils/openai-client.js";
 import { MASTER_OCCUPANCY_LIST_FOR_AI } from '../providers/master-data/occupancy.data.js';
 
