@@ -1,39 +1,115 @@
 import { b2bConfig } from '../integrations/b2b/b2b.config.js';
 import { Parser } from 'xml2js';
 
-async function fetchApiData(providerType, searchParams) {
-  const API_URL = 'https://us-east1-prj-infra-europlus.cloudfunctions.net/hotels';
-
-  // Mapeia os parâmetros da busca para o formato do corpo da requisição da API
-  const requestBody = {
-    type: providerType,
+function buildHotelbedsPayload(searchParams) {
+  return {
+    type: 'hotelbeds',
     stay: {
       checkIn: searchParams.checkIn,
       checkOut: searchParams.checkOut,
     },
     occupancies: searchParams.rooms.map(room => ({
-      rooms: 1, // Assumindo 1 quarto por entrada, ajuste se necessário
+      rooms: 1,
       adults: room.adults,
       children: room.children.length,
-      // Se a API precisar das idades, seria: childrenAges: room.children.map(c => c.age)
     })),
     destination: {
-      // Assume que os searchParams terão um destinationCode
       code: searchParams.destinationCode,
     },
     filter: {
-      maxHotels: 50, // Pode ser parametrizado no futuro
+      maxHotels: 50,
     },
   };
+}
 
-  // console.log(`[ProviderService] Enviando requisição para ${providerType} com o corpo:`, JSON.stringify(requestBody, null, 2));
+/**
+ * Constrói o payload para o provedor Omnibees.
+ * @param {object} searchParams - Os parâmetros da busca.
+ * @returns {object} O corpo da requisição para a Omnibees.
+ */
+function buildOmnibeesPayload(searchParams) {
+  // Lista estática de códigos de hotel para teste, como solicitado.
+  const staticHotelCodes = ["2192", "2195", "2196", "2197", "2198", "2199", "2200", "2240", "2462", "2788"];
+
+  return {
+    type: "omnibees",
+    AvailRatesOnly: true,
+    BestOnly: false,
+    EchoToken: "teste-pass-connect",
+    // CORREÇÃO: Adicionado o TimeStamp dinâmico para cada requisição.
+    TimeStamp: new Date().toISOString(),
+    HotelSearchCriteria: {
+      Criterion: {
+        HotelRefs: staticHotelCodes.map(code => ({ HotelCode: code })),
+        RoomStayCandidatesType: {
+          RoomStayCandidates: searchParams.rooms.map(room => ({
+            GuestCountsType: {
+              GuestCounts: [{
+                AgeQualifyCode: 10, // 10 para Adulto
+                Count: room.adults,
+              }],
+            },
+            Quantity: 1,
+          })),
+        },
+        StayDateRange: {
+          Start: searchParams.checkIn,
+          End: searchParams.checkOut,
+        },
+        TPA_Extensions: {
+          IncludeAllFittingOccupations: true,
+          MultimediaObjects: { SendData: false },
+        },
+      },
+    },
+    POS: {
+      Sources: [{ ISOCountry: "BRA" }],
+    },
+    // AJUSTE: Alterado para o código de linguagem numérico que a API parece esperar.
+    PrimaryLangID: 8,
+    Version: 5,
+  };
+}
+
+// Mapa de estratégias: mapeia um provider a sua função de construção de payload.
+const payloadBuilders = {
+  hotelbeds: buildHotelbedsPayload,
+  omnibees: buildOmnibeesPayload,
+  // Para adicionar um novo provedor, basta adicionar a função aqui.
+  // ex: newProvider: buildNewProviderPayload,
+};
+
+
+// --- FUNÇÃO DE FETCH GENÉRICA E REATORADA ---
+
+/**
+ * Função genérica para buscar dados na API de hotéis.
+ * Ela seleciona a estratégia correta para construir o payload.
+ * @param {string} providerType - O nome do provedor ('omnibees', 'hotelbeds').
+ * @param {object} searchParams - Os parâmetros da busca.
+ * @returns {Promise<object>} Os dados brutos do provedor.
+ */
+async function fetchApiData(providerType, searchParams) {
+  const API_URL = 'https://us-east1-prj-infra-europlus.cloudfunctions.net/hotels';
+  
+  // Seleciona a função de construção de payload correta do mapa de estratégias.
+  const buildPayload = payloadBuilders[providerType];
+
+  if (!buildPayload) {
+    const errorMsg = `[ProviderService] Nenhum construtor de payload encontrado para o provedor: ${providerType}`;
+    console.error(errorMsg);
+    throw new Error(errorMsg);
+  }
+
+  // Constrói o corpo da requisição usando a estratégia selecionada.
+  const requestBody = buildPayload(searchParams);
+
+  console.log(`[ProviderService] Enviando requisição para ${providerType} com o corpo:`, JSON.stringify(requestBody, null, 2));
 
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(requestBody),
     });
 
@@ -43,18 +119,17 @@ async function fetchApiData(providerType, searchParams) {
       throw new Error(`Falha ao buscar dados de ${providerType}. Status: ${response.status}`);
     }
 
-    // Retorna a resposta JSON diretamente, que será passada para o mapeador.
     return await response.json();
 
   } catch (error) {
     console.error(`[ProviderService] Exceção ao buscar dados de ${providerType}:`, error);
-    // Retorna uma estrutura que não quebrará o orquestrador
     if (providerType === 'hotelbeds') {
-      return { hotels: [] };
+        return { hotels: [] };
     }
     return [];
   }
 }
+
 
 export async function fetchOmnibeesData(searchParams) {
   // Chama a função genérica especificando o tipo 'omnibees'
